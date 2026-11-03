@@ -178,7 +178,7 @@ namespace YimMenu
 
 					if (!fileName.size())
 					{
-						Notifications::Show(TR("Outfit"), TR("Filename empty!"), NotificationType::Warning)"Outfit", "Filename empty!", NotificationType::Warning);
+						Notifications::Show(TR(TR("Outfit")), TR(TR("Filename empty!")), NotificationType::Warning)"Outfit", "Filename empty!", NotificationType::Warning);
 						return;
 					}
 

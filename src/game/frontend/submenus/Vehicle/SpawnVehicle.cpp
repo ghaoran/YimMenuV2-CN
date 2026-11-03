@@ -213,7 +213,7 @@ namespace YimMenu::Submenus
 									else
 									{
 										if (!personalVeh->Request(spawnInsidePersonalVehicle.GetState()))
-											Notifications::Show(TR("Spawn Personal Vehicle"), TR("Failed to spawn Personal Vehicle."), NotificationType::Error)"Spawn Personal Vehicle", "Failed to spawn Personal Vehicle.", NotificationType::Error);
+											Notifications::Show(TR(TR("Spawn Personal Vehicle")), TR(TR("Failed to spawn Personal Vehicle.")), NotificationType::Error)"Spawn Personal Vehicle", "Failed to spawn Personal Vehicle.", NotificationType::Error);
 									}
 								});
 							}

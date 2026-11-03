@@ -194,7 +194,7 @@ namespace YimMenu::Submenus
 
 					if (!NETSHOPPING::NET_GAMESERVER_BASKET_START(&txn_id, info.m_Category.m_Hash, info.m_Action.m_Hash, 4))
 					{
-						Notifications::Show(TR("Transactions"), TR("Failed to create basket"), NotificationType::Error)"Transactions", "Failed to create basket", NotificationType::Error);
+						Notifications::Show(TR(TR("Transactions")), TR(TR("Failed to create basket")), NotificationType::Error)"Transactions", "Failed to create basket", NotificationType::Error);
 						txn_failed = true;
 						NETSHOPPING::NET_GAMESERVER_BASKET_END();
 						return;
@@ -219,8 +219,8 @@ namespace YimMenu::Submenus
 
 						if (!NETSHOPPING::NET_GAMESERVER_BASKET_ADD_ITEM(&scr_item, item.m_Quantity))
 						{
-							Notifications::Show(TR("Transactions"),
-							    std::format(TR("Failed to add {} (x{}) to basket"), item.m_PrimaryItem.m_Name, item.m_Quantity),
+							Notifications::Show(TR(TR("Transactions")),
+							    std::format(TR(TR("Failed to add {} (x{}) to basket")), item.m_PrimaryItem.m_Name, item.m_Quantity),
 							    NotificationType::Error)"Transactions",
 							    std::format("Failed to add {} (x{}) to basket", item.m_PrimaryItem.m_Name, item.m_Quantity),
 							    NotificationType::Error);
@@ -234,7 +234,7 @@ namespace YimMenu::Submenus
 				{
 					if (!NETSHOPPING::NET_GAMESERVER_BEGIN_SERVICE(&txn_id, info.m_Category.m_Hash, info.m_Service.m_Item.m_Hash, info.m_Action.m_Hash, info.m_Service.m_Price, 4))
 					{
-						Notifications::Show(TR("Transactions"), TR("Failed to create service"), NotificationType::Error)"Transactions", "Failed to create service", NotificationType::Error);
+						Notifications::Show(TR(TR("Transactions")), TR(TR("Failed to create service")), NotificationType::Error)"Transactions", "Failed to create service", NotificationType::Error);
 						txn_failed = true;
 						return;
 					}
@@ -247,7 +247,7 @@ namespace YimMenu::Submenus
 
 				if (!NETSHOPPING::NET_GAMESERVER_CHECKOUT_START(txn_id))
 				{
-					Notifications::Show(TR("Transactions"), TR("Failed to begin checkout"), NotificationType::Error)"Transactions", "Failed to begin checkout", NotificationType::Error);
+					Notifications::Show(TR(TR("Transactions")), TR(TR("Failed to begin checkout")), NotificationType::Error)"Transactions", "Failed to begin checkout", NotificationType::Error);
 					txn_failed = true;
 					return;
 				}
@@ -260,11 +260,11 @@ namespace YimMenu::Submenus
 
 				if (txn->m_Status == 3)
 				{
-					Notifications::Show(TR("Transactions"), TR("Transaction complete"), NotificationType::Success)"Transactions", "Transaction complete", NotificationType::Success);
+					Notifications::Show(TR(TR("Transactions")), TR(TR("Transaction complete")), NotificationType::Success)"Transactions", "Transaction complete", NotificationType::Success);
 				}
 				else
 				{
-					Notifications::Show(TR("Transactions"), TR("Transaction failed"), NotificationType::Error)"Transactions", "Transaction failed", NotificationType::Error);
+					Notifications::Show(TR(TR("Transactions")), TR(TR("Transaction failed")), NotificationType::Error)"Transactions", "Transaction failed", NotificationType::Error);
 				}
 			}
 		});

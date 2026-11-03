@@ -134,7 +134,7 @@ namespace YimMenu::Submenus
 		}
 		else
 		{
-			Notifications::Show(TR("Random Events"), TR("Event script is not active. Are you a participant?"), NotificationType::Error)"Random Events", "Event script is not active. Are you a participant?", NotificationType::Error);
+			Notifications::Show(TR(TR("Random Events")), TR(TR("Event script is not active. Are you a participant?")), NotificationType::Error)"Random Events", "Event script is not active. Are you a participant?", NotificationType::Error);
 		}
 	}
 
@@ -232,12 +232,12 @@ namespace YimMenu::Submenus
 						ScriptMgr::Yield(100ms);
 						if (GSBDRandomEvents->EventData[selectedEvent].State == eRandomEventState::INACTIVE)
 						{
-							Notifications::Show(TR("Random Events"), TR("Failed to launch event. Are you freemode host?"), NotificationType::Error)"Random Events", "Failed to launch event. Are you freemode host?", NotificationType::Error);
+							Notifications::Show(TR(TR("Random Events")), TR(TR("Failed to launch event. Are you freemode host?")), NotificationType::Error)"Random Events", "Failed to launch event. Are you freemode host?", NotificationType::Error);
 						}
 					}
 					else
 					{
-						Notifications::Show(TR("Random Events"), TR("Event is already active."), NotificationType::Error)"Random Events", "Event is already active.", NotificationType::Error);
+						Notifications::Show(TR(TR("Random Events")), TR(TR("Event is already active.")), NotificationType::Error)"Random Events", "Event is already active.", NotificationType::Error);
 					}
 				});
 			}
@@ -259,7 +259,7 @@ namespace YimMenu::Submenus
 					}
 					else
 					{
-						Notifications::Show(TR("Random Events"), TR("Event is not active."), NotificationType::Error)"Random Events", "Event is not active.", NotificationType::Error);
+						Notifications::Show(TR(TR("Random Events")), TR(TR("Event is not active.")), NotificationType::Error)"Random Events", "Event is not active.", NotificationType::Error);
 					}
 				});
 			}
@@ -277,12 +277,12 @@ namespace YimMenu::Submenus
 						}
 						else // Either update event coords TSE not sent yet or event doesn't register a trigger point
 						{
-							Notifications::Show(TR("Random Events"), TR("Failed to teleport to event. Coordinates are not valid."), NotificationType::Error)"Random Events", "Failed to teleport to event. Coordinates are not valid.", NotificationType::Error);
+							Notifications::Show(TR(TR("Random Events")), TR(TR("Failed to teleport to event. Coordinates are not valid.")), NotificationType::Error)"Random Events", "Failed to teleport to event. Coordinates are not valid.", NotificationType::Error);
 						}
 					}
 					else
 					{
-						Notifications::Show(TR("Random Events"), TR("Event is not active."), NotificationType::Error)"Random Events", "Event is not active.", NotificationType::Error);
+						Notifications::Show(TR(TR("Random Events")), TR(TR("Event is not active.")), NotificationType::Error)"Random Events", "Event is not active.", NotificationType::Error);
 					}
 				});
 			}

@@ -194,7 +194,7 @@ namespace YimMenu::Submenus
 				}
 				else
 				{
-					Notifications::Show(TR("Saved Players"), TR("Failed to get RID from username"), NotificationType::Error)"Saved Players", "Failed to get RID from username", NotificationType::Error);
+					Notifications::Show(TR(TR("Saved Players")), TR(TR("Failed to get RID from username")), NotificationType::Error)"Saved Players", "Failed to get RID from username", NotificationType::Error);
 				}
 			});
 	}

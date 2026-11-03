@@ -248,7 +248,7 @@ namespace YimMenu::Features
 				return;
 
 			SetAllDailyActivitiesCompleted(true);
-			Notifications::Show(TR("Daily Activities"), TR("Completed all activities, switch session to apply the changes."))"Daily Activities", "Completed all activities, switch session to apply the changes.");
+			Notifications::Show(TR(TR("Daily Activities")), TR(TR("Completed all activities, switch session to apply the changes.")))"Daily Activities", "Completed all activities, switch session to apply the changes.");
 		}
 	};
 
@@ -262,7 +262,7 @@ namespace YimMenu::Features
 				return;
 
 			SetAllDailyActivitiesCompleted(false);
-			Notifications::Show(TR("Daily Activities"), TR("Reset all activities, switch session to apply the changes."))"Daily Activities", "Reset all activities, switch session to apply the changes.");
+			Notifications::Show(TR(TR("Daily Activities")), TR(TR("Reset all activities, switch session to apply the changes.")))"Daily Activities", "Reset all activities, switch session to apply the changes.");
 		}
 	};
 
@@ -300,7 +300,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR("Hidden Caches"), TR("This Hidden Cache has already been collected."), NotificationType::Error)"Hidden Caches", "This Hidden Cache has already been collected.", NotificationType::Error);
+				Notifications::Show(TR(TR("Hidden Caches")), TR(TR("This Hidden Cache has already been collected.")), NotificationType::Error)"Hidden Caches", "This Hidden Cache has already been collected.", NotificationType::Error);
 			}
 		}
 	};
@@ -320,7 +320,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR("Hidden Caches"), TR("This Hidden Cache has already been collected."), NotificationType::Error)"Hidden Caches", "This Hidden Cache has already been collected.", NotificationType::Error);
+				Notifications::Show(TR(TR("Hidden Caches")), TR(TR("This Hidden Cache has already been collected.")), NotificationType::Error)"Hidden Caches", "This Hidden Cache has already been collected.", NotificationType::Error);
 			}
 		}
 	};
@@ -340,7 +340,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR("Treasure Chests"), TR("This Treasure Chest has already been collected."), NotificationType::Error)"Treasure Chests", "This Treasure Chest has already been collected.", NotificationType::Error);
+				Notifications::Show(TR(TR("Treasure Chests")), TR(TR("This Treasure Chest has already been collected.")), NotificationType::Error)"Treasure Chests", "This Treasure Chest has already been collected.", NotificationType::Error);
 			}
 		}
 	};
@@ -360,7 +360,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR("Treasure Chests"), TR("This Treasure Chest has already been collected."), NotificationType::Error)"Treasure Chests", "This Treasure Chest has already been collected.", NotificationType::Error);
+				Notifications::Show(TR(TR("Treasure Chests")), TR(TR("This Treasure Chest has already been collected.")), NotificationType::Error)"Treasure Chests", "This Treasure Chest has already been collected.", NotificationType::Error);
 			}
 		}
 	};
@@ -404,7 +404,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR("Shipwreck"), TR("Shipwreck has already been collected."), NotificationType::Error)"Shipwreck", "Shipwreck has already been collected.", NotificationType::Error);
+				Notifications::Show(TR(TR("Shipwreck")), TR(TR("Shipwreck has already been collected.")), NotificationType::Error)"Shipwreck", "Shipwreck has already been collected.", NotificationType::Error);
 			}
 		}
 	};
@@ -424,7 +424,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR("Shipwreck"), TR("Shipwreck has already been collected."), NotificationType::Error)"Shipwreck", "Shipwreck has already been collected.", NotificationType::Error);
+				Notifications::Show(TR(TR("Shipwreck")), TR(TR("Shipwreck has already been collected.")), NotificationType::Error)"Shipwreck", "Shipwreck has already been collected.", NotificationType::Error);
 			}
 		}
 	};
@@ -444,7 +444,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR("Buried Stashes"), TR("This Buried Stash has already been collected."), NotificationType::Error)"Buried Stashes", "This Buried Stash has already been collected.", NotificationType::Error);
+				Notifications::Show(TR(TR("Buried Stashes")), TR(TR("This Buried Stash has already been collected.")), NotificationType::Error)"Buried Stashes", "This Buried Stash has already been collected.", NotificationType::Error);
 			}
 		}
 	};
@@ -464,7 +464,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR("Buried Stashes"), TR("This Buried Stash has already been collected."), NotificationType::Error)"Buried Stashes", "This Buried Stash has already been collected.", NotificationType::Error);
+				Notifications::Show(TR(TR("Buried Stashes")), TR(TR("This Buried Stash has already been collected.")), NotificationType::Error)"Buried Stashes", "This Buried Stash has already been collected.", NotificationType::Error);
 			}
 		}
 	};
@@ -567,7 +567,7 @@ namespace YimMenu::Features
 
 			if (stat.empty() || Stats::GetInt(stat) != -1)
 			{
-				Notifications::Show(TR("Time Trials"), TR("This Time Trial has already been beaten."), NotificationType::Error)"Time Trials", "This Time Trial has already been beaten.", NotificationType::Error);
+				Notifications::Show(TR(TR("Time Trials")), TR(TR("This Time Trial has already been beaten.")), NotificationType::Error)"Time Trials", "This Time Trial has already been beaten.", NotificationType::Error);
 				return;
 			}
 
@@ -589,7 +589,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR("Time Trials"), TR("Please enable the blip from the Interaction Menu."), NotificationType::Error)"Time Trials", "Please enable the blip from the Interaction Menu.", NotificationType::Error);
+				Notifications::Show(TR(TR("Time Trials")), TR(TR("Please enable the blip from the Interaction Menu.")), NotificationType::Error)"Time Trials", "Please enable the blip from the Interaction Menu.", NotificationType::Error);
 			}
 		}
 	};
@@ -613,7 +613,7 @@ namespace YimMenu::Features
 
 			if (stat.empty() || Stats::GetInt(stat) != -1)
 			{
-				Notifications::Show(TR("Time Trials"), TR("This Time Trial has already been beaten."), NotificationType::Error)"Time Trials", "This Time Trial has already been beaten.", NotificationType::Error);
+				Notifications::Show(TR(TR("Time Trials")), TR(TR("This Time Trial has already been beaten.")), NotificationType::Error)"Time Trials", "This Time Trial has already been beaten.", NotificationType::Error);
 				return;
 			}
 
@@ -678,7 +678,7 @@ namespace YimMenu::Features
 
 			if (GPBD_Flow::Get()->Entries[Self::GetPlayer().GetId()].TunerCBVDeliveredFlags.Value == 1023)
 			{
-				Notifications::Show(TR("Exotic Exports"), TR("You have already delivered all the vehicles."), NotificationType::Error)"Exotic Exports", "You have already delivered all the vehicles.", NotificationType::Error);
+				Notifications::Show(TR(TR("Exotic Exports")), TR(TR("You have already delivered all the vehicles.")), NotificationType::Error)"Exotic Exports", "You have already delivered all the vehicles.", NotificationType::Error);
 				return;
 			}
 
@@ -701,13 +701,13 @@ namespace YimMenu::Features
 
 			if (GPBD_Flow::Get()->Entries[Self::GetPlayer().GetId()].TunerCBVDeliveredFlags.Value == 1023)
 			{
-				Notifications::Show(TR("Exotic Exports"), TR("You have already delivered all the vehicles."), NotificationType::Error)"Exotic Exports", "You have already delivered all the vehicles.", NotificationType::Error);
+				Notifications::Show(TR(TR("Exotic Exports")), TR(TR("You have already delivered all the vehicles.")), NotificationType::Error)"Exotic Exports", "You have already delivered all the vehicles.", NotificationType::Error);
 				return;
 			}
 
 			/*if (!FreemodeDelivery::Get()->DeliveryCooldown1.HasTimePassed(30000))
 			{
-				Notifications::Show(TR("Exotic Exports"), TR("You have just delivered a vehicle, wait a moment."), NotificationType::Error)"Exotic Exports", "You have just delivered a vehicle, wait a moment.", NotificationType::Error);
+				Notifications::Show(TR(TR("Exotic Exports")), TR(TR("You have just delivered a vehicle, wait a moment.")), NotificationType::Error)"Exotic Exports", "You have just delivered a vehicle, wait a moment.", NotificationType::Error);
 				return;
 			}*/
 
@@ -733,7 +733,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR("G's Cache"), TR("G's Cache has already been collected."), NotificationType::Error)"G's Cache", "G's Cache has already been collected.", NotificationType::Error);
+				Notifications::Show(TR(TR("G's Cache")), TR(TR("G's Cache has already been collected.")), NotificationType::Error)"G's Cache", "G's Cache has already been collected.", NotificationType::Error);
 			}
 		}
 	};
@@ -753,7 +753,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR("G's Cache"), TR("G's Cache has already been collected."), NotificationType::Error)"G's Cache", "G's Cache has already been collected.", NotificationType::Error);
+				Notifications::Show(TR(TR("G's Cache")), TR(TR("G's Cache has already been collected.")), NotificationType::Error)"G's Cache", "G's Cache has already been collected.", NotificationType::Error);
 			}
 		}
 	};
@@ -778,7 +778,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR("Stash House"), TR("Stash House has already been raided."), NotificationType::Error)"Stash House", "Stash House has already been raided.", NotificationType::Error);
+				Notifications::Show(TR(TR("Stash House")), TR(TR("Stash House has already been raided.")), NotificationType::Error)"Stash House", "Stash House has already been raided.", NotificationType::Error);
 			}
 		}
 	};
@@ -848,7 +848,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR("LS Tags"), TR("This LS Tag has already been sprayed."), NotificationType::Error)"LS Tags", "This LS Tag has already been sprayed.", NotificationType::Error);
+				Notifications::Show(TR(TR("LS Tags")), TR(TR("This LS Tag has already been sprayed.")), NotificationType::Error)"LS Tags", "This LS Tag has already been sprayed.", NotificationType::Error);
 			}
 		}
 	};
@@ -868,7 +868,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR("LS Tags"), TR("This LS Tag has already been sprayed."), NotificationType::Error)"LS Tags", "This LS Tag has already been sprayed.", NotificationType::Error);
+				Notifications::Show(TR(TR("LS Tags")), TR(TR("This LS Tag has already been sprayed.")), NotificationType::Error)"LS Tags", "This LS Tag has already been sprayed.", NotificationType::Error);
 			}
 		}
 	};
@@ -884,7 +884,7 @@ namespace YimMenu::Features
 
 			if (Stats::GetInt("MPX_BAIL_OFFICE_OWNED") == 0)
 			{
-				Notifications::Show(TR("Madrazo Hits"), TR("You must own a Bail Office."), NotificationType::Error)"Madrazo Hits", "You must own a Bail Office.", NotificationType::Error);
+				Notifications::Show(TR(TR("Madrazo Hits")), TR(TR("You must own a Bail Office.")), NotificationType::Error)"Madrazo Hits", "You must own a Bail Office.", NotificationType::Error);
 				return;
 			}
 
@@ -899,7 +899,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR("Madrazo Hits"), TR("Madrazo Hit has already been completed."), NotificationType::Error)"Madrazo Hits", "Madrazo Hit has already been completed.", NotificationType::Error);
+				Notifications::Show(TR(TR("Madrazo Hits")), TR(TR("Madrazo Hit has already been completed.")), NotificationType::Error)"Madrazo Hits", "Madrazo Hit has already been completed.", NotificationType::Error);
 			}
 		}
 	};
@@ -942,7 +942,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR("Shoot Animals Photography"), TR("This animal has already been photographed."), NotificationType::Error)"Shoot Animals Photography", "This animal has already been photographed.", NotificationType::Error);
+				Notifications::Show(TR(TR("Shoot Animals Photography")), TR(TR("This animal has already been photographed.")), NotificationType::Error)"Shoot Animals Photography", "This animal has already been photographed.", NotificationType::Error);
 			}
 		}
 	};
@@ -968,7 +968,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR("Shoot Animals Photography"), TR("This animal has already been photographed."), NotificationType::Error)"Shoot Animals Photography", "This animal has already been photographed.", NotificationType::Error);
+				Notifications::Show(TR(TR("Shoot Animals Photography")), TR(TR("This animal has already been photographed.")), NotificationType::Error)"Shoot Animals Photography", "This animal has already been photographed.", NotificationType::Error);
 			}
 		}
 	};
@@ -984,7 +984,7 @@ namespace YimMenu::Features
 
 			if (Stats::GetInt("MPX_SB_WEED_SHOP_OWNED") == 0)
 			{
-				Notifications::Show(TR("Smoke on the Water"), TR("You must own a Smoke on the Water property."), NotificationType::Error)"Smoke on the Water", "You must own a Smoke on the Water property.", NotificationType::Error);
+				Notifications::Show(TR(TR("Smoke on the Water")), TR(TR("You must own a Smoke on the Water property.")), NotificationType::Error)"Smoke on the Water", "You must own a Smoke on the Water property.", NotificationType::Error);
 				return;
 			}
 
@@ -994,7 +994,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR("Smoke on the Water"), TR("This product has already been collected."), NotificationType::Error)"Smoke on the Water", "This product has already been collected.", NotificationType::Error);
+				Notifications::Show(TR(TR("Smoke on the Water")), TR(TR("This product has already been collected.")), NotificationType::Error)"Smoke on the Water", "This product has already been collected.", NotificationType::Error);
 			}
 		}
 	};
@@ -1010,7 +1010,7 @@ namespace YimMenu::Features
 
 			if (Stats::GetInt("MPX_SB_WEED_SHOP_OWNED") == 0)
 			{
-				Notifications::Show(TR("Smoke on the Water"), TR("You must own a Smoke on the Water property."), NotificationType::Error)"Smoke on the Water", "You must own a Smoke on the Water property.", NotificationType::Error);
+				Notifications::Show(TR(TR("Smoke on the Water")), TR(TR("You must own a Smoke on the Water property.")), NotificationType::Error)"Smoke on the Water", "You must own a Smoke on the Water property.", NotificationType::Error);
 				return;
 			}
 
@@ -1020,7 +1020,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR("Smoke on the Water"), TR("This product has already been collected."), NotificationType::Error)"Smoke on the Water", "This product has already been collected.", NotificationType::Error);
+				Notifications::Show(TR(TR("Smoke on the Water")), TR(TR("This product has already been collected.")), NotificationType::Error)"Smoke on the Water", "This product has already been collected.", NotificationType::Error);
 			}
 		}
 	};
@@ -1040,7 +1040,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR("Golden Clover"), TR("Golden Clover has already been collected."), NotificationType::Error)"Golden Clover", "Golden Clover has already been collected.", NotificationType::Error);
+				Notifications::Show(TR(TR("Golden Clover")), TR(TR("Golden Clover has already been collected.")), NotificationType::Error)"Golden Clover", "Golden Clover has already been collected.", NotificationType::Error);
 			}
 		}
 	};
@@ -1060,7 +1060,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR("Golden Clover"), TR("Golden Clover has already been collected."), NotificationType::Error)"Golden Clover", "Golden Clover has already been collected.", NotificationType::Error);
+				Notifications::Show(TR(TR("Golden Clover")), TR(TR("Golden Clover has already been collected.")), NotificationType::Error)"Golden Clover", "Golden Clover has already been collected.", NotificationType::Error);
 			}
 		}
 	};

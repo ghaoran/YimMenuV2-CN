@@ -67,36 +67,36 @@ namespace YimMenu
 
 		if (saved_data.m_FetchedData->m_GameState != FetchedPlayerData::GameState::INVALID && fetched_data.m_GameState == FetchedPlayerData::GameState::INVALID && Features::_NotifyWhenOffline.GetState())
 		{
-			Notifications::Show(TR("Player Tracker"), std::format(TR("{} is no longer online"), saved_data.m_Name))"Player Tracker", std::format("{} is no longer online", saved_data.m_Name));
+			Notifications::Show(TR(TR("Player Tracker")), std::format(TR(TR("{} is no longer online")), saved_data.m_Name))"Player Tracker", std::format("{} is no longer online", saved_data.m_Name));
 		}
 		else if (!IsInJoinableSession(saved_data.m_FetchedData->m_GameState) && IsInJoinableSession(fetched_data.m_GameState) && Features::_NotifyWhenJoinable.GetState())
 		{
-			Notifications::Show(TR("Player Tracker"), std::format(TR("{} is now in a joinable session"), saved_data.m_Name))"Player Tracker", std::format("{} is now in a joinable session", saved_data.m_Name));
+			Notifications::Show(TR(TR("Player Tracker")), std::format(TR(TR("{} is now in a joinable session")), saved_data.m_Name))"Player Tracker", std::format("{} is now in a joinable session", saved_data.m_Name));
 		}
 		else if (saved_data.m_FetchedData->m_GameState == FetchedPlayerData::GameState::INVALID && saved_data.m_FetchedData->m_GameState != FetchedPlayerData::GameState::INVALID && Features::_NotifyWhenOnline.GetState())
 		{
-			Notifications::Show(TR("Player Tracker"), std::format(TR("{} is now online"), saved_data.m_Name))"Player Tracker", std::format("{} is now online", saved_data.m_Name));
+			Notifications::Show(TR(TR("Player Tracker")), std::format(TR(TR("{} is now online")), saved_data.m_Name))"Player Tracker", std::format("{} is now online", saved_data.m_Name));
 		}
 		else if (IsInJoinableSession(saved_data.m_FetchedData->m_GameState) && !IsInJoinableSession(fetched_data.m_GameState) && Features::_NotifyWhenUnjoinable.GetState())
 		{
-			Notifications::Show(TR("Player Tracker"), std::format(TR("{} is no longer in a joinable session"), saved_data.m_Name))"Player Tracker", std::format("{} is no longer in a joinable session", saved_data.m_Name));
+			Notifications::Show(TR(TR("Player Tracker")), std::format(TR(TR("{} is no longer in a joinable session")), saved_data.m_Name))"Player Tracker", std::format("{} is no longer in a joinable session", saved_data.m_Name));
 		}
 
 		if (IsValidSessionType(saved_data.m_FetchedData->m_GameState) && IsValidSessionType(fetched_data.m_GameState)
 		    && saved_data.m_FetchedData->m_GameState != fetched_data.m_GameState && Features::_NotifyOnSessionTypeChange.GetState())
 		{
-			Notifications::Show(TR("Player Tracker"), std::format(TR("{} is now in a {} session"), saved_data.m_Name, FetchedPlayerData::GameStateToString(fetched_data.m_GameState)))"Player Tracker", std::format("{} is now in a {} session", saved_data.m_Name, FetchedPlayerData::GameStateToString(fetched_data.m_GameState)));
+			Notifications::Show(TR(TR("Player Tracker")), std::format(TR(TR("{} is now in a {} session")), saved_data.m_Name, FetchedPlayerData::GameStateToString(fetched_data.m_GameState)))"Player Tracker", std::format("{} is now in a {} session", saved_data.m_Name, FetchedPlayerData::GameStateToString(fetched_data.m_GameState)));
 		}
 
 		if (Features::_NotifyOnMissionChange.GetState())
 		{
 			if (saved_data.m_FetchedData->m_MissionType != FetchedPlayerData::MissionType::NONE && fetched_data.m_MissionType == FetchedPlayerData::MissionType::NONE)
 			{
-				Notifications::Show(TR("Player Tracker"), std::format(TR("{} is no longer in a {}"), saved_data.m_Name, FetchedPlayerData::MissionTypeToString(saved_data.m_FetchedData->m_MissionType)))"Player Tracker", std::format("{} is no longer in a {}", saved_data.m_Name, FetchedPlayerData::MissionTypeToString(saved_data.m_FetchedData->m_MissionType)));
+				Notifications::Show(TR(TR("Player Tracker")), std::format(TR(TR("{} is no longer in a {}")), saved_data.m_Name, FetchedPlayerData::MissionTypeToString(saved_data.m_FetchedData->m_MissionType)))"Player Tracker", std::format("{} is no longer in a {}", saved_data.m_Name, FetchedPlayerData::MissionTypeToString(saved_data.m_FetchedData->m_MissionType)));
 			}
 			else if (fetched_data.m_MissionType != FetchedPlayerData::MissionType::NONE && fetched_data.m_MissionType != saved_data.m_FetchedData->m_MissionType)
 			{
-				Notifications::Show(TR("Player Tracker"), std::format(TR("{} is now in a {}"), saved_data.m_Name, FetchedPlayerData::MissionTypeToString(fetched_data.m_MissionType)))"Player Tracker", std::format("{} is now in a {}", saved_data.m_Name, FetchedPlayerData::MissionTypeToString(fetched_data.m_MissionType)));
+				Notifications::Show(TR(TR("Player Tracker")), std::format(TR(TR("{} is now in a {}")), saved_data.m_Name, FetchedPlayerData::MissionTypeToString(fetched_data.m_MissionType)))"Player Tracker", std::format("{} is now in a {}", saved_data.m_Name, FetchedPlayerData::MissionTypeToString(fetched_data.m_MissionType)));
 			}
 		}
 
@@ -106,17 +106,17 @@ namespace YimMenu
 			{
 				if (fetched_data.m_HostOfTransition)
 				{
-					Notifications::Show(TR("Player Tracker"), std::format(TR("{} has hosted a job lobby"), saved_data.m_Name))"Player Tracker", std::format("{} has hosted a job lobby", saved_data.m_Name));
+					Notifications::Show(TR(TR("Player Tracker")), std::format(TR(TR("{} has hosted a job lobby")), saved_data.m_Name))"Player Tracker", std::format("{} has hosted a job lobby", saved_data.m_Name));
 				}
 				else
 				{
-					Notifications::Show(TR("Player Tracker"), std::format(TR("{} has joined a job lobby"), saved_data.m_Name))"Player Tracker", std::format("{} has joined a job lobby", saved_data.m_Name));
+					Notifications::Show(TR(TR("Player Tracker")), std::format(TR(TR("{} has joined a job lobby")), saved_data.m_Name))"Player Tracker", std::format("{} has joined a job lobby", saved_data.m_Name));
 				}
 			}
 			else if ((!saved_data.m_FetchedData->m_InTransition && fetched_data.m_InTransition)
 			    && (!Features::_NotifyOnMissionChange.GetState() || (fetched_data.m_MissionType == saved_data.m_FetchedData->m_MissionType)))
 			{
-				Notifications::Show(TR("Player Tracker"), std::format(TR("{} is no longer in a job lobby"), saved_data.m_Name))"Player Tracker", std::format("{} is no longer in a job lobby", saved_data.m_Name));
+				Notifications::Show(TR(TR("Player Tracker")), std::format(TR(TR("{} is no longer in a job lobby")), saved_data.m_Name))"Player Tracker", std::format("{} is no longer in a job lobby", saved_data.m_Name));
 			}
 		}
 

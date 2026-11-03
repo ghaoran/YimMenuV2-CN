@@ -44,7 +44,7 @@ namespace YimMenu::Features
 							}
 							else
 							{
-								Notifications::Show(TR("Custom Weapon"), TR("Entity is not a ped."), NotificationType::Warning)"Custom Weapon", "Entity is not a ped.", NotificationType::Warning);
+								Notifications::Show(TR(TR("Custom Weapon")), TR(TR("Entity is not a ped.")), NotificationType::Warning)"Custom Weapon", "Entity is not a ped.", NotificationType::Warning);
 							}
 						}
 					});
@@ -61,14 +61,14 @@ namespace YimMenu::Features
 					if (RayCast(&m_Entity).Cast())
 					{
 						if (m_Entity.IsPed() && m_Entity.IsPlayer())
-							Notifications::Show(TR("Custom Weapon"), TR("Player entity cannot be deleted."), NotificationType::Warning)"Custom Weapon", "Player entity cannot be deleted.", NotificationType::Warning);
+							Notifications::Show(TR(TR("Custom Weapon")), TR(TR("Player entity cannot be deleted.")), NotificationType::Warning)"Custom Weapon", "Player entity cannot be deleted.", NotificationType::Warning);
 						else
 						{
 							auto location = m_Entity.GetPosition();
 							auto distance = Self::GetPed().GetPosition().GetDistance(location);
 
 							if (distance > 500)
-								Notifications::Show(TR("Custom Weapon"), TR("Entity is too far."), NotificationType::Warning)"Custom Weapon", "Entity is too far.", NotificationType::Warning);
+								Notifications::Show(TR(TR("Custom Weapon")), TR(TR("Entity is too far.")), NotificationType::Warning)"Custom Weapon", "Entity is too far.", NotificationType::Warning);
 							else
 								m_Entity.Delete();
 						}
@@ -134,7 +134,7 @@ namespace YimMenu::Features
 
 							if (m_Entity.IsPed() && m_Entity.IsPlayer())
 							{
-								Notifications::Show(TR("Custom Weapon"), TR("Gravity gun cannot be applied on player entity."), NotificationType::Warning)"Custom Weapon", "Gravity gun cannot be applied on player entity.", NotificationType::Warning);
+								Notifications::Show(TR(TR("Custom Weapon")), TR(TR("Gravity gun cannot be applied on player entity.")), NotificationType::Warning)"Custom Weapon", "Gravity gun cannot be applied on player entity.", NotificationType::Warning);
 							}
 							else
 							{
@@ -147,7 +147,7 @@ namespace YimMenu::Features
 
 								if (tempDistance > 500)
 								{
-									Notifications::Show(TR("Custom Weapon"), TR("Entity is too far."), NotificationType::Warning)"Custom Weapon", "Entity is too far.", NotificationType::Warning);
+									Notifications::Show(TR(TR("Custom Weapon")), TR(TR("Entity is too far.")), NotificationType::Warning)"Custom Weapon", "Entity is too far.", NotificationType::Warning);
 								}
 								else
 								{
@@ -218,7 +218,7 @@ namespace YimMenu::Features
 						}
 						else
 						{
-							Notifications::Show(TR("Custom Weapon"), TR("Invalid vehicle."), NotificationType::Warning)"Custom Weapon", "Invalid vehicle.", NotificationType::Warning);
+							Notifications::Show(TR(TR("Custom Weapon")), TR(TR("Invalid vehicle.")), NotificationType::Warning)"Custom Weapon", "Invalid vehicle.", NotificationType::Warning);
 						}
 					}
 				}
@@ -239,7 +239,7 @@ namespace YimMenu::Features
 						}
 						else
 						{
-							Notifications::Show(TR("Custom Weapon"), TR("Invalid vehicle."), NotificationType::Warning)"Custom Weapon", "Invalid vehicle.", NotificationType::Warning);
+							Notifications::Show(TR(TR("Custom Weapon")), TR(TR("Invalid vehicle.")), NotificationType::Warning)"Custom Weapon", "Invalid vehicle.", NotificationType::Warning);
 						}
 					}
 				}
@@ -256,14 +256,14 @@ namespace YimMenu::Features
 				{
 					if (!_VehicleGunModel.GetString().length())
 					{
-						Notifications::Show(TR("Custom Weapon"), TR("No vehicle model name provided."), NotificationType::Error)"Custom Weapon", "No vehicle model name provided.", NotificationType::Error);
+						Notifications::Show(TR(TR("Custom Weapon")), TR(TR("No vehicle model name provided.")), NotificationType::Error)"Custom Weapon", "No vehicle model name provided.", NotificationType::Error);
 						return;
 					}
 
 					auto modelHash = Joaat(_VehicleGunModel.GetString());
 					if (!STREAMING::IS_MODEL_IN_CDIMAGE(modelHash))
 					{
-						Notifications::Show(TR("Custom Weapon"), TR("Invalid vehicle model name provided."), NotificationType::Error)"Custom Weapon", "Invalid vehicle model name provided.", NotificationType::Error);
+						Notifications::Show(TR(TR("Custom Weapon")), TR(TR("Invalid vehicle model name provided.")), NotificationType::Error)"Custom Weapon", "Invalid vehicle model name provided.", NotificationType::Error);
 					}
 					else
 					{

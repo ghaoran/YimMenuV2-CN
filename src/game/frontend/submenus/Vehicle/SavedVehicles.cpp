@@ -36,7 +36,7 @@ namespace YimMenu::Submenus
 
 						if (!fileName.size())
 						{
-							Notifications::Show(TR("Saved Vehicles"), TR("Filename empty!"), NotificationType::Warning)"Saved Vehicles", "Filename empty!", NotificationType::Warning);
+							Notifications::Show(TR(TR("Saved Vehicles")), TR(TR("Filename empty!")), NotificationType::Warning)"Saved Vehicles", "Filename empty!", NotificationType::Warning);
 							return;
 						}
 

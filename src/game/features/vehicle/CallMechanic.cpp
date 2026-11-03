@@ -18,7 +18,7 @@ namespace YimMenu::Features
 		{
 			if (!*Pointers.IsSessionStarted || Scripts::IsScriptActive("AM_CONTACT_REQUESTS"_J))
 			{
-				Notifications::Show(TR("Mechanic"), TR("Not safe to call the mechanic at the moment."), NotificationType::Error)"Mechanic", "Not safe to call the mechanic at the moment.", NotificationType::Error);
+				Notifications::Show(TR(TR("Mechanic")), TR(TR("Not safe to call the mechanic at the moment.")), NotificationType::Error)"Mechanic", "Not safe to call the mechanic at the moment.", NotificationType::Error);
 				return;
 			}
 
@@ -41,7 +41,7 @@ namespace YimMenu::Features
 				}
 				else
 				{
-					Notifications::Show(TR("Mechanic"), TR("Failed to call the mechanic."), NotificationType::Error)"Mechanic", "Failed to call the mechanic.", NotificationType::Error);
+					Notifications::Show(TR(TR("Mechanic")), TR(TR("Failed to call the mechanic.")), NotificationType::Error)"Mechanic", "Failed to call the mechanic.", NotificationType::Error);
 				}
 			}
 		}

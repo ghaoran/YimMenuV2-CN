@@ -62,8 +62,8 @@ namespace YimMenu::Submenus
 										    !vehicle.IsSeatFree(-1))
 										{
 											Notifications::Show(
-											    TR("Spawn Ped"),
-											    TR("Cannot spawn ped in vehicle, all seats are occupied, please free a seat first or disable 'Spawn In My Vehicle' option."),
+											    TR(TR("Spawn Ped")),
+											    TR(TR("Cannot spawn ped in vehicle, all seats are occupied, please free a seat first or disable 'Spawn In My Vehicle' option.")),
 											    NotificationType::Warning)
 											    "Spawn Ped",
 											    "Cannot spawn ped in vehicle, all seats are occupied, please free a seat first or disable 'Spawn In My Vehicle' option.",
