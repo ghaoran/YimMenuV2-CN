@@ -105,6 +105,11 @@ namespace YimMenu::Localization
 		return CacheComposite(key, std::move(value));
 	}
 
+	const char* TrNotif(std::string_view text)
+	{
+		return Tr(text);
+	}
+
 	std::size_t EntryCount()
 	{
 		return kEntryCount;

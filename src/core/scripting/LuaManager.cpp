@@ -89,7 +89,7 @@ namespace YimMenu
 						}
 						catch (const std::filesystem::filesystem_error& error)
 						{
-							Notifications::Show(TR("Lua Scripts"), error.what(), NotificationType::Error);
+							Notifications::Show(TrNotif("Lua Scripts"), error.what(), NotificationType::Error);
 							continue;
 						}
 					}
@@ -119,7 +119,7 @@ namespace YimMenu
 					}
 					catch (const std::filesystem::filesystem_error& error)
 					{
-						Notifications::Show(TR("Lua Scripts"), error.what(), NotificationType::Error);
+						Notifications::Show(TrNotif("Lua Scripts"), error.what(), NotificationType::Error);
 					}
 					return true;
 				});
@@ -133,7 +133,7 @@ namespace YimMenu
 
 					if (script->IsMalfunctioning())
 					{
-						Notifications::Show(TR("Lua Scripting"), std::format(TR("Script {} has been unloaded due to a malfunction. Check the console for more details"), script->GetName()), NotificationType::Warning);
+						Notifications::Show(TrNotif("Lua Scripting"), std::format(TrNotif("Script {} has been unloaded due to a malfunction. Check the console for more details"), script->GetName()), NotificationType::Warning);
 						unload = true;
 					}
 					else if (script->GetLoadState() == LuaScript::LoadState::WANT_UNLOAD)

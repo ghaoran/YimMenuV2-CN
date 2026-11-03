@@ -20,6 +20,9 @@ namespace YimMenu::Localization
 	// two commands sharing one Chinese translation still get distinct widget ids.
 	const char* LabelFor(std::string_view internalName, std::string_view english);
 
+	// Notification helper: keeps TR() out of lambda/constexpr-sensitive contexts.
+	const char* TrNotif(std::string_view text);
+
 	// Number of loaded entries.
 	std::size_t EntryCount();
 }
