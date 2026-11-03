@@ -57,11 +57,11 @@ namespace YimMenu::Submenus
 			FiberPool::Push([=] {
 				if (newLocationName.empty())
 				{
-					Notifications::Show(TR(TR("Custom Teleport")), TR(TR("Please enter a valid name")), NotificationType::Warning)"Custom Teleport", "Please enter a valid name", NotificationType::Warning);
+					Notifications::Show(TR("Custom Teleport"), TR("Please enter a valid name"), NotificationType::Warning);
 				}
 				else if (SavedLocations::GetSavedLocationByName(newLocationName))
 				{
-					Notifications::Show(TR(TR("Custom Teleport")), std::format(TR(TR("Location with name {} already exists")), newLocationName))"Custom Teleport", std::format("Location with name {} already exists", newLocationName));
+					Notifications::Show(TR("Custom Teleport"), std::format(TR("Location with name {} already exists"), newLocationName));
 				}
 				else
 				{
@@ -86,7 +86,7 @@ namespace YimMenu::Submenus
 
 		ImGui::Separator();
 
-		ImGui::Text( TR("Double click to teleport\nShift click to delete"));
+		ImGui::Text( LBL("Double click to teleport\nShift click to delete"));
 
 		ImGui::Spacing();
 
@@ -94,7 +94,7 @@ namespace YimMenu::Submenus
 		InputTextWithHint("##filter", "Search", &filter).Draw();
 
 		ImGui::BeginGroup();
-		ImGui::Text( TR("Categories"));
+		ImGui::Text( LBL("Categories"));
 		if (ImGui::BeginListBox("##categories", {200, -1}))
 		{
 			for (auto& l : SavedLocations::GetAllSavedLocations() | std::ranges::views::keys)
@@ -114,7 +114,7 @@ namespace YimMenu::Submenus
 		ImGui::EndGroup();
 		ImGui::SameLine();
 		ImGui::BeginGroup();
-		ImGui::Text( TR("Locations"));
+		ImGui::Text( LBL("Locations"));
 		if (ImGui::BeginListBox("##saved_locs", {200, -1})) // Need automatic dimensions instead of hard coded
 		{
 			if (SavedLocations::GetAllSavedLocations().find(category) != SavedLocations::GetAllSavedLocations().end())

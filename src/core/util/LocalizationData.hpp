@@ -245,7 +245,7 @@ namespace YimMenu::Localization
 		{"Distance: %.2f"sv, "距离：%.2f"sv},
 		{"Distance: %f"sv, "距离：%f"sv},
 		{"DoTeleport"sv, "执行传送"sv},
-		{"Double click to teleport\\\\\\\\nShift click to delete"sv, "双击传送\\\\\\\\nShift 点击删除"sv},
+		{"Double click to teleport\\\\\\\\\\\\\\\\nShift click to delete"sv, "双击传送\\\\\\\\\\\\\\\\nShift 点击删除"sv},
 		{"Downtown Vinewood Clubhouse"sv, "好麦坞市区会所"sv},
 		{"Dream Tower, Apt 15"sv, "梦想大厦 15 号公寓"sv},
 		{"Drifty Yosemite"sv, "漂移约塞米蒂"sv},

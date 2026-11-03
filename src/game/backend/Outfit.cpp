@@ -61,7 +61,7 @@ namespace YimMenu
 
 			if (!std::filesystem::exists(file))
 			{
-				Notifications::Show(TR(TR("Outfit")), TR(TR("File does not exist.")), NotificationType::Error)"Outfit", "File does not exist.", NotificationType::Error);
+				Notifications::Show(TR("Outfit"), TR("File does not exist."), NotificationType::Error);
 				return;
 			}
 
@@ -83,7 +83,7 @@ namespace YimMenu
 
 			if (j["model"] != Self::GetPed().GetModel())
 			{
-				Notifications::Show(TR(TR("Oufit")), TR(TR("Ped models different.")), NotificationType::Error)"Oufit", "Ped models different.", NotificationType::Error);
+				Notifications::Show(TR("Oufit"), TR("Ped models different."), NotificationType::Error);
 				return;
 			}
 

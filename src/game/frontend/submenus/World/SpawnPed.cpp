@@ -15,7 +15,7 @@ namespace YimMenu::Submenus
 {
 	std::shared_ptr<Category> BuildSpawnPedMenu()
 	{
-		auto menu = std::make_shared<Category>("Spawn Ped");
+		auto menu = std::make_shared<Category>(TR("Spawn Ped"));
 
 		static bool invincible;
 		static bool spawnDead;
@@ -62,11 +62,8 @@ namespace YimMenu::Submenus
 										    !vehicle.IsSeatFree(-1))
 										{
 											Notifications::Show(
-											    TR(TR("Spawn Ped")),
-											    TR(TR("Cannot spawn ped in vehicle, all seats are occupied, please free a seat first or disable 'Spawn In My Vehicle' option.")),
-											    NotificationType::Warning)
-											    "Spawn Ped",
-											    "Cannot spawn ped in vehicle, all seats are occupied, please free a seat first or disable 'Spawn In My Vehicle' option.",
+											    TR("Spawn Ped"),
+											    TR("Cannot spawn ped in vehicle, all seats are occupied, please free a seat first or disable 'Spawn In My Vehicle' option."),
 											    NotificationType::Warning);
 											return;
 										}
@@ -200,7 +197,7 @@ namespace YimMenu::Submenus
 
 			ImGui::SameLine();
 			ImGui::BeginGroup();
-			ImGui::BulletText( TR("Ctrl+Click to set player model"));
+			ImGui::BulletText( LBL("Ctrl+Click to set player model"));
 			ImGui::Checkbox( LBL("Invincible"), &invincible);
 			ImGui::Checkbox( LBL("Spawn Dead"), &spawnDead);
 			ImGui::Checkbox( LBL("Spawn As Bodyguard"), &spawnAsBodyguard);

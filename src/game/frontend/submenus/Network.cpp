@@ -43,7 +43,7 @@ namespace YimMenu::Submenus
 					}
 					else
 					{
-						Notifications::Show(TR(TR("Joiner")), TR(TR("Failed to get RID from username")), NotificationType::Error)"Joiner", "Failed to get RID from username", NotificationType::Error);
+						Notifications::Show(TR("Joiner"), TR("Failed to get RID from username"), NotificationType::Error);
 					}
 				});
 

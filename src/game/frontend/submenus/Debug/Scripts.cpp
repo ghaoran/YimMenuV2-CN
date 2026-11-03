@@ -131,7 +131,7 @@ namespace YimMenu::Submenus
 
 		auto tabBar = std::make_unique<TabBarItem>("Scripts");
 		auto threads = std::make_unique<TabItem>("Threads");
-		auto script = std::make_unique<TabItem>("Start Script");
+		auto script = std::make_unique<TabItem>(TR("Start Script"));
 
 		threads->AddItem(std::make_unique<ImGuiItem>([] {
 			static rage::scrThread* curThread = nullptr;
@@ -141,7 +141,7 @@ namespace YimMenu::Submenus
 			{
 				curThread = nullptr;
 				curProgram = nullptr;
-				return ImGui::TextDisabled( TR("None"));
+				return ImGui::TextDisabled( LBL("None"));
 			}
 
 			if (ImGui::BeginCombo( LBL("Thread"), curThread ? curThread->m_ScriptName : "(Select)"))
@@ -335,26 +335,26 @@ namespace YimMenu::Submenus
 
 			ImGui::Checkbox( LBL("Pause After Starting"), &pauseAfterStarting);
 
-			if (ImGui::Button( LBL("Start Script")))
+			if (ImGui::Button( LBL(TR("Start Script"))))
 			{
 				FiberPool::Push([] {
 					auto hash = Joaat(scriptSearch);
 
 					if (!SCRIPT::DOES_SCRIPT_WITH_NAME_HASH_EXIST(hash))
 					{
-						Notifications::Show(TR(TR("Start Script")), TR(TR("Script does not exist.")), NotificationType::Error)"Start Script", "Script does not exist.", NotificationType::Error);
+						Notifications::Show(TR("Start Script"), TR("Script does not exist."), NotificationType::Error);
 						return;
 					}
 
 					if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(hash) > 0)
 					{
-						Notifications::Show(TR(TR("Start Script")), TR(TR("Script is already running.")), NotificationType::Error)"Start Script", "Script is already running.", NotificationType::Error);
+						Notifications::Show(TR("Start Script"), TR("Script is already running."), NotificationType::Error);
 						return;
 					}
 
 					if (MISC::GET_NUMBER_OF_FREE_STACKS_OF_THIS_SIZE(stackSize) == 0)
 					{
-						Notifications::Show(TR(TR("Start Script")), TR(TR("No free stack of this size.")), NotificationType::Error)"Start Script", "No free stack of this size.", NotificationType::Error);
+						Notifications::Show(TR("Start Script"), TR("No free stack of this size."), NotificationType::Error);
 						return;
 					}
 
@@ -381,7 +381,7 @@ namespace YimMenu::Submenus
 					}
 
 					SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(hash);
-					Notifications::Show(TR(TR("Start Script")), std::format(TR(TR("Started script with ID {}.")), id), NotificationType::Success)"Start Script", std::format("Started script with ID {}.", id), NotificationType::Success);
+					Notifications::Show(TR("Start Script"), std::format(TR("Started script with ID {}."), id), NotificationType::Success);
 				});
 			}
 

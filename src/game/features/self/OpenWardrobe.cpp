@@ -36,7 +36,7 @@ namespace YimMenu::Features
 		{
 			if (!*Pointers.IsSessionStarted || Scripts::IsScriptActive("wardrobe_mp"_J))
 			{
-				Notifications::Show(TR(TR("Wardrobe")), TR(TR("Not safe to open the wardrobe at the moment.")), NotificationType::Error)"Wardrobe", "Not safe to open the wardrobe at the moment.", NotificationType::Error);
+				Notifications::Show(TR("Wardrobe"), TR("Not safe to open the wardrobe at the moment."), NotificationType::Error);
 				return;
 			}
 
@@ -46,7 +46,7 @@ namespace YimMenu::Features
 			launchData.Heading = Self::GetPed().GetHeading();
 			if (!Scripts::StartScript("wardrobe_mp"_J, eStackSizes::SHOP, &launchData, SCR_SIZEOF(launchData)))
 			{
-				Notifications::Show(TR(TR("Wardrobe")), TR(TR("Failed to open the wardrobe.")), NotificationType::Error)"Wardrobe", "Failed to open the wardrobe.", NotificationType::Error);
+				Notifications::Show(TR("Wardrobe"), TR("Failed to open the wardrobe."), NotificationType::Error);
 				return;
 			}
 

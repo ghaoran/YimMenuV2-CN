@@ -134,7 +134,7 @@ namespace YimMenu::Submenus
 		}
 		else
 		{
-			Notifications::Show(TR(TR("Random Events")), TR(TR("Event script is not active. Are you a participant?")), NotificationType::Error)"Random Events", "Event script is not active. Are you a participant?", NotificationType::Error);
+			Notifications::Show(TR("Random Events"), TR("Event script is not active. Are you a participant?"), NotificationType::Error);
 		}
 	}
 
@@ -152,26 +152,26 @@ namespace YimMenu::Submenus
 		for (auto& patch : sendUpdateRECoordsTSECooldownPatches)
 			patch->Enable();
 
-		auto menu = std::make_shared<Category>("Random Events");
+		auto menu = std::make_shared<Category>(TR("Random Events"));
 
 		menu->AddItem(std::make_unique<ImGuiItem>([] {
 			GPBDFM2 = GPBD_FM_2::Get();
 			GSBDRandomEvents = GSBD_RandomEvents::Get();
 			if (!GPBDFM2 || !GSBDRandomEvents)
-				return ImGui::Text( TR("Freemode global block is not loaded."));
+				return ImGui::Text( LBL("Freemode global block is not loaded."));
 
 			if (GPBDFM2->Entries[Self::GetPlayer().GetId()].RandomEventsClientData.InitState != eRandomEventClientInitState::INITIALIZED)
-				return ImGui::Text( TR("Random Events are not initialized."));
+				return ImGui::Text( LBL("Random Events are not initialized."));
 
 			if (auto freemode = Scripts::FindScriptThread("freemode"_J))
 			{
 				FMRandomEvents = RANDOM_EVENTS_FREEMODE_DATA::Get(freemode);
 				if (!FMRandomEvents)
-					return ImGui::Text( TR("Freemode stack is not valid."));
+					return ImGui::Text( LBL("Freemode stack is not valid."));
 			}
 			else
 			{
-				return ImGui::Text( TR("Freemode is not running."));
+				return ImGui::Text( LBL("Freemode is not running."));
 			}
 
 			if (ImGui::BeginCombo( LBL("Select Event"), randomEventNames[selectedEvent]))
@@ -232,12 +232,12 @@ namespace YimMenu::Submenus
 						ScriptMgr::Yield(100ms);
 						if (GSBDRandomEvents->EventData[selectedEvent].State == eRandomEventState::INACTIVE)
 						{
-							Notifications::Show(TR(TR("Random Events")), TR(TR("Failed to launch event. Are you freemode host?")), NotificationType::Error)"Random Events", "Failed to launch event. Are you freemode host?", NotificationType::Error);
+							Notifications::Show(TR("Random Events"), TR("Failed to launch event. Are you freemode host?"), NotificationType::Error);
 						}
 					}
 					else
 					{
-						Notifications::Show(TR(TR("Random Events")), TR(TR("Event is already active.")), NotificationType::Error)"Random Events", "Event is already active.", NotificationType::Error);
+						Notifications::Show(TR("Random Events"), TR("Event is already active."), NotificationType::Error);
 					}
 				});
 			}
@@ -259,7 +259,7 @@ namespace YimMenu::Submenus
 					}
 					else
 					{
-						Notifications::Show(TR(TR("Random Events")), TR(TR("Event is not active.")), NotificationType::Error)"Random Events", "Event is not active.", NotificationType::Error);
+						Notifications::Show(TR("Random Events"), TR("Event is not active."), NotificationType::Error);
 					}
 				});
 			}
@@ -277,12 +277,12 @@ namespace YimMenu::Submenus
 						}
 						else // Either update event coords TSE not sent yet or event doesn't register a trigger point
 						{
-							Notifications::Show(TR(TR("Random Events")), TR(TR("Failed to teleport to event. Coordinates are not valid.")), NotificationType::Error)"Random Events", "Failed to teleport to event. Coordinates are not valid.", NotificationType::Error);
+							Notifications::Show(TR("Random Events"), TR("Failed to teleport to event. Coordinates are not valid."), NotificationType::Error);
 						}
 					}
 					else
 					{
-						Notifications::Show(TR(TR("Random Events")), TR(TR("Event is not active.")), NotificationType::Error)"Random Events", "Event is not active.", NotificationType::Error);
+						Notifications::Show(TR("Random Events"), TR("Event is not active."), NotificationType::Error);
 					}
 				});
 			}
@@ -313,8 +313,8 @@ namespace YimMenu::Submenus
 			ImGui::Text( TR("State: %s"), GetEventStateString().c_str());
 			if (GSBDRandomEvents->EventData[selectedEvent].State == eRandomEventState::INACTIVE)
 			{
-				ImGui::Text( TR("Location: N/A"));
-				ImGui::Text( TR("Trigger Range: N/A"));
+				ImGui::Text( LBL("Location: N/A"));
+				ImGui::Text( LBL("Trigger Range: N/A"));
 			}
 			else
 			{

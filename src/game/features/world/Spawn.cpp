@@ -19,7 +19,7 @@ namespace YimMenu::Features
 			auto model = _PedModelName.GetString();
 			if (!model.length())
 			{
-				Notifications::Show(TR(TR("Spawn Ped")), TR(TR("No model name provided.")), NotificationType::Error)"Spawn Ped", "No model name provided.", NotificationType::Error);
+				Notifications::Show(TR("Spawn Ped"), TR("No model name provided."), NotificationType::Error);
 				return;
 			}
 
@@ -30,7 +30,7 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR(TR("Spawn Ped")), TR(TR("Invalid model name provided.")), NotificationType::Error)"Spawn Ped", "Invalid model name provided.", NotificationType::Error);
+				Notifications::Show(TR("Spawn Ped"), TR("Invalid model name provided."), NotificationType::Error);
 			}
 		}
 	};
@@ -44,7 +44,7 @@ namespace YimMenu::Features
 			auto model = _ObjectModelName.GetString();
 			if (!model.length())
 			{
-				Notifications::Show(TR(TR("Spawn Object")), TR(TR("No model name provided.")), NotificationType::Error)"Spawn Object", "No model name provided.", NotificationType::Error);
+				Notifications::Show(TR("Spawn Object"), TR("No model name provided."), NotificationType::Error);
 				return;
 			}
 
@@ -55,11 +55,11 @@ namespace YimMenu::Features
 			}
 			else
 			{
-				Notifications::Show(TR(TR("Spawn Object")), TR(TR("Invalid model name provided.")), NotificationType::Error)"Spawn Object", "Invalid model name provided.", NotificationType::Error);
+				Notifications::Show(TR("Spawn Object"), TR("Invalid model name provided."), NotificationType::Error);
 			}
 		}
 	};
 
-	static SpawnPed _SpawnPed{"spawnped", "Spawn Ped", "Spawns a ped at your current location."};
-	static SpawnObject _SpawnObject{"spawnobject", "Spawn Object", "Spawns an object at your current location."};
+	static SpawnPed _SpawnPed{"spawnped", TR("Spawn Ped"), "Spawns a ped at your current location."};
+	static SpawnObject _SpawnObject{"spawnobject", TR("Spawn Object"), "Spawns an object at your current location."};
 }

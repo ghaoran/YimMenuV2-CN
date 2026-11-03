@@ -194,7 +194,7 @@ namespace YimMenu::Submenus
 
 					if (!NETSHOPPING::NET_GAMESERVER_BASKET_START(&txn_id, info.m_Category.m_Hash, info.m_Action.m_Hash, 4))
 					{
-						Notifications::Show(TR(TR("Transactions")), TR(TR("Failed to create basket")), NotificationType::Error)"Transactions", "Failed to create basket", NotificationType::Error);
+						Notifications::Show(TR("Transactions"), TR("Failed to create basket"), NotificationType::Error);
 						txn_failed = true;
 						NETSHOPPING::NET_GAMESERVER_BASKET_END();
 						return;
@@ -219,10 +219,8 @@ namespace YimMenu::Submenus
 
 						if (!NETSHOPPING::NET_GAMESERVER_BASKET_ADD_ITEM(&scr_item, item.m_Quantity))
 						{
-							Notifications::Show(TR(TR("Transactions")),
-							    std::format(TR(TR("Failed to add {} (x{}) to basket")), item.m_PrimaryItem.m_Name, item.m_Quantity),
-							    NotificationType::Error)"Transactions",
-							    std::format("Failed to add {} (x{}) to basket", item.m_PrimaryItem.m_Name, item.m_Quantity),
+							Notifications::Show(TR("Transactions"),
+							    std::format(TR("Failed to add {} (x{}) to basket"), item.m_PrimaryItem.m_Name, item.m_Quantity),
 							    NotificationType::Error);
 							txn_failed = true;
 							NETSHOPPING::NET_GAMESERVER_BASKET_END();
@@ -234,7 +232,7 @@ namespace YimMenu::Submenus
 				{
 					if (!NETSHOPPING::NET_GAMESERVER_BEGIN_SERVICE(&txn_id, info.m_Category.m_Hash, info.m_Service.m_Item.m_Hash, info.m_Action.m_Hash, info.m_Service.m_Price, 4))
 					{
-						Notifications::Show(TR(TR("Transactions")), TR(TR("Failed to create service")), NotificationType::Error)"Transactions", "Failed to create service", NotificationType::Error);
+						Notifications::Show(TR("Transactions"), TR("Failed to create service"), NotificationType::Error);
 						txn_failed = true;
 						return;
 					}
@@ -247,7 +245,7 @@ namespace YimMenu::Submenus
 
 				if (!NETSHOPPING::NET_GAMESERVER_CHECKOUT_START(txn_id))
 				{
-					Notifications::Show(TR(TR("Transactions")), TR(TR("Failed to begin checkout")), NotificationType::Error)"Transactions", "Failed to begin checkout", NotificationType::Error);
+					Notifications::Show(TR("Transactions"), TR("Failed to begin checkout"), NotificationType::Error);
 					txn_failed = true;
 					return;
 				}
@@ -260,11 +258,11 @@ namespace YimMenu::Submenus
 
 				if (txn->m_Status == 3)
 				{
-					Notifications::Show(TR(TR("Transactions")), TR(TR("Transaction complete")), NotificationType::Success)"Transactions", "Transaction complete", NotificationType::Success);
+					Notifications::Show(TR("Transactions"), TR("Transaction complete"), NotificationType::Success);
 				}
 				else
 				{
-					Notifications::Show(TR(TR("Transactions")), TR(TR("Transaction failed")), NotificationType::Error)"Transactions", "Transaction failed", NotificationType::Error);
+					Notifications::Show(TR("Transactions"), TR("Transaction failed"), NotificationType::Error);
 				}
 			}
 		});
@@ -504,20 +502,20 @@ namespace YimMenu::Submenus
 
 	std::shared_ptr<Category> BuildTransactionsMenu()
 	{
-		auto menu = std::make_shared<Category>("Transactions");
+		auto menu = std::make_shared<Category>(TR("Transactions"));
 		auto normal = std::make_shared<Group>("Triggerer");
 
 		normal->AddItem(std::make_unique<ImGuiItem>([] {
 			if (!NativeInvoker::AreHandlersCached())
-				return ImGui::TextDisabled( TR("Natives not cached yet"));
+				return ImGui::TextDisabled( LBL("Natives not cached yet"));
 
 			if (AnticheatBypass::IsFSLProvidingLocalSaves())
-				return ImGui::TextDisabled( TR("Transactions are not supported with FSL local saves enabled"));
+				return ImGui::TextDisabled( LBL("Transactions are not supported with FSL local saves enabled"));
 
 			if (!NETSHOPPING::NET_GAMESERVER_CATALOG_IS_VALID())
-				return ImGui::TextDisabled( TR("Catalog not loaded yet"));
+				return ImGui::TextDisabled( LBL("Catalog not loaded yet"));
 
-			ImGui::Text( TR("Warning: You are solely responsible for what you do with this tool. If you don't know what you're doing, you'll likely get banned"));
+			ImGui::Text( LBL("Warning: You are solely responsible for what you do with this tool. If you don't know what you're doing, you'll likely get banned"));
 
 			static TransactionInfo info{};
 			bool txn_valid{true};

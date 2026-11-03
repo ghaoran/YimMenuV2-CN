@@ -79,7 +79,7 @@ namespace YimMenu::Submenus
 
 			if (players.size() == 0)
 			{
-				ImGui::TextDisabled( TR("No saved players"));
+				ImGui::TextDisabled( LBL("No saved players"));
 				ImGui::EndListBox();
 				return;
 			}
@@ -146,7 +146,7 @@ namespace YimMenu::Submenus
 			}
 			else
 			{
-				ImGui::TextDisabled( TR("Data not fetched yet"));
+				ImGui::TextDisabled( LBL("Data not fetched yet"));
 			}
 
 			if (ImGui::Button( LBL("Join")))
@@ -194,14 +194,14 @@ namespace YimMenu::Submenus
 				}
 				else
 				{
-					Notifications::Show(TR(TR("Saved Players")), TR(TR("Failed to get RID from username")), NotificationType::Error)"Saved Players", "Failed to get RID from username", NotificationType::Error);
+					Notifications::Show(TR("Saved Players"), TR("Failed to get RID from username"), NotificationType::Error);
 				}
 			});
 	}
 
 	std::shared_ptr<Category> BuildSavedPlayersMenu()
 	{
-		auto menu = std::make_shared<Category>("Saved Players");
+		auto menu = std::make_shared<Category>(TR("Saved Players"));
 		auto players = std::make_shared<Group>("Players");
 		auto new_player = std::make_shared<Group>("New");
 		auto tracking = std::make_shared<Group>("Tracking");
