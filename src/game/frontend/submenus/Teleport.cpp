@@ -61,7 +61,7 @@ namespace YimMenu::Submenus
 				}
 				else if (SavedLocations::GetSavedLocationByName(newLocationName))
 				{
-					Notifications::Show(TR("Custom Teleport"), std::format(TR("Location with name {} already exists"), newLocationName));
+					Notifications::Show(TR("Custom Teleport"), FTR("Location with name {} already exists", newLocationName));
 				}
 				else
 				{

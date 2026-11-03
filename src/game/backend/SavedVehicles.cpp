@@ -168,10 +168,10 @@ namespace YimMenu
 				{
 					if (spawnInside)
 						Self::GetPed().SetInVehicle(veh.GetHandle());
-					Notifications::Show(TR("Persist Car"), std::format(TR("Spawned {}"), fileName), NotificationType::Success);
+					Notifications::Show(TR("Persist Car"), FTR("Spawned {}", fileName), NotificationType::Success);
 				}
 				else
-					Notifications::Show(TR("Persist Car"), std::format(TR("Unable to spawn {}"), fileName), NotificationType::Error);
+					Notifications::Show(TR("Persist Car"), FTR("Unable to spawn {}", fileName), NotificationType::Error);
 			}
 			catch (std::exception& e)
 			{

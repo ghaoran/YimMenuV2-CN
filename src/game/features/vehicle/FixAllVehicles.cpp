@@ -23,7 +23,7 @@ namespace YimMenu::Features
 			}
 
 			if (count > 0)
-				Notifications::Show(TR("Fix All Vehicles"), std::format(TR("{} vehicles fixed."), count), NotificationType::Success);
+				Notifications::Show(TR("Fix All Vehicles"), FTR("{} vehicles fixed.", count), NotificationType::Success);
 			else
 				Notifications::Show(TR("Fix All Vehicles"), TR("No vehicles to fix."));
 		}

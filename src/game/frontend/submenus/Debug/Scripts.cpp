@@ -381,7 +381,7 @@ namespace YimMenu::Submenus
 					}
 
 					SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(hash);
-					Notifications::Show(TR("Start Script"), std::format(TR("Started script with ID {}."), id), NotificationType::Success);
+					Notifications::Show(TR("Start Script"), FTR("Started script with ID {}.", id), NotificationType::Success);
 				});
 			}
 

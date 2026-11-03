@@ -220,7 +220,7 @@ namespace YimMenu::Submenus
 						if (!NETSHOPPING::NET_GAMESERVER_BASKET_ADD_ITEM(&scr_item, item.m_Quantity))
 						{
 							Notifications::Show(TR("Transactions"),
-							    std::format(TR("Failed to add {} (x{}) to basket"), item.m_PrimaryItem.m_Name, item.m_Quantity),
+							    FTR("Failed to add {} (x{}) to basket", item.m_PrimaryItem.m_Name, item.m_Quantity),
 							    NotificationType::Error);
 							txn_failed = true;
 							NETSHOPPING::NET_GAMESERVER_BASKET_END();

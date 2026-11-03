@@ -1,6 +1,8 @@
 #pragma once
+#include <format>
 #include <string>
 #include <string_view>
+#include <utility>
 
 namespace YimMenu::Localization
 {
@@ -20,11 +22,16 @@ namespace YimMenu::Localization
 	// two commands sharing one Chinese translation still get distinct widget ids.
 	const char* LabelFor(std::string_view internalName, std::string_view english);
 
-	// Notification helper: keeps TR() out of lambda/constexpr-sensitive contexts.
-	const char* TrNotif(std::string_view text);
-
 	// Number of loaded entries.
 	std::size_t EntryCount();
+
+	// Runtime formatting. std::format requires a compile-time literal, so a
+	// translated pattern has to go through std::vformat instead.
+	template <typename... Args>
+	std::string FormatTr(std::string_view pattern, Args&&... args)
+	{
+		return std::vformat(Tr(pattern), std::make_format_args(args...));
+	}
 }
 
 // For widgets whose label doubles as the ImGui id (buttons, inputs, combos...).
@@ -33,3 +40,6 @@ namespace YimMenu::Localization
 // For pure display strings (ImGui::Text, SetTooltip). ImGui::Text is a printf
 // style call, so the text must not gain a "##id" suffix.
 #define TR(s) ::YimMenu::Localization::Tr(s)
+
+// For translated format strings: FTR("{} is now online", name)
+#define FTR(pattern, ...) ::YimMenu::Localization::FormatTr(pattern, __VA_ARGS__)
