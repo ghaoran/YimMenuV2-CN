@@ -18,7 +18,7 @@ namespace YimMenu
 	{
 		if (!m_Command)
 		{
-			ImGui::Text( LBL("Unknown!"));
+			ImGui::Text( TR("Unknown!"));
 			return;
 		}
 
@@ -40,14 +40,14 @@ namespace YimMenu
 
 		if (ImGui::BeginPopup("##saved", ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize))
 		{
-			ImGui::Text( LBL("Click on a location to select it. Add more at Teleport > Saved"));
+			ImGui::Text( TR("Click on a location to select it. Add more at Teleport > Saved"));
 			InputTextWithHint("##filter", "Search", &m_CurrentFilter).Draw();
 
 			const float max_length = *Pointers.ScreenResY / 3.2;
 
 			// TODO: duplicated code
 			ImGui::BeginGroup();
-			ImGui::Text( LBL("Categories"));
+			ImGui::Text( TR("Categories"));
 
 			if (ImGui::BeginListBox("##categories", {200, max_length}))
 			{
@@ -68,7 +68,7 @@ namespace YimMenu
 			ImGui::EndGroup();
 			ImGui::SameLine();
 			ImGui::BeginGroup();
-			ImGui::Text( LBL("Locations"));
+			ImGui::Text( TR("Locations"));
 			if (ImGui::BeginListBox("##saved_locs", {200, max_length}))
 			{
 				if (SavedLocations::GetAllSavedLocations().find(m_CurrentCategory) != SavedLocations::GetAllSavedLocations().end())

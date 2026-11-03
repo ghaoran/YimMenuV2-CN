@@ -141,7 +141,7 @@ namespace YimMenu
 			file_stream.close();
 		}
 		else
-			Notifications::Show("Persist Car", "Tried to save a vehicle which does not exist", NotificationType::Warning);
+			Notifications::Show(TR("Persist Car"), TR("Tried to save a vehicle which does not exist"), NotificationType::Warning)"Persist Car", "Tried to save a vehicle which does not exist", NotificationType::Warning);
 	}
 
 	void SavedVehicles::Load(std::string folderName, std::string fileName, bool spawnInside)
@@ -152,7 +152,7 @@ namespace YimMenu
 
 			if (!std::filesystem::exists(file))
 			{
-				Notifications::Show("Persist Car", "File does not exist.", NotificationType::Error);
+				Notifications::Show(TR("Persist Car"), TR("File does not exist."), NotificationType::Error)"Persist Car", "File does not exist.", NotificationType::Error);
 				return;
 			}
 
@@ -168,10 +168,10 @@ namespace YimMenu
 				{
 					if (spawnInside)
 						Self::GetPed().SetInVehicle(veh.GetHandle());
-					Notifications::Show("Persist Car", std::format("Spawned {}", fileName), NotificationType::Success);
+					Notifications::Show(TR("Persist Car"), std::format(TR("Spawned {}"), fileName), NotificationType::Success)"Persist Car", std::format("Spawned {}", fileName), NotificationType::Success);
 				}
 				else
-					Notifications::Show("Persist Car", std::format("Unable to spawn {}", fileName), NotificationType::Error);
+					Notifications::Show(TR("Persist Car"), std::format(TR("Unable to spawn {}"), fileName), NotificationType::Error)"Persist Car", std::format("Unable to spawn {}", fileName), NotificationType::Error);
 			}
 			catch (std::exception& e)
 			{
@@ -181,7 +181,7 @@ namespace YimMenu
 			file_stream.close();
 		}
 		else
-			Notifications::Show("Persist Car", "Select a file first", NotificationType::Warning);
+			Notifications::Show(TR("Persist Car"), TR("Select a file first"), NotificationType::Warning)"Persist Car", "Select a file first", NotificationType::Warning);
 	}
 
 	Vehicle SavedVehicles::SpawnFromJson(nlohmann::json vehicle_json)

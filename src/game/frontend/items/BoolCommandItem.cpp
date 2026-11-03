@@ -16,7 +16,7 @@ namespace YimMenu
 	{
 		if (!m_Command)
 		{
-			ImGui::Text( LBL("Unknown!"));
+			ImGui::Text( TR("Unknown!"));
 			return;
 		}
 
@@ -38,8 +38,8 @@ namespace YimMenu
 		ImGui::SetNextWindowSize(ImVec2(500, 120));
 		if (ImGui::BeginPopupModal(windowLabel.data(), nullptr, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoScrollbar))
 		{
-			ImGui::BulletText( LBL("Hover over the command name to change its hotkey"));
-			ImGui::BulletText( LBL("Press any registered key to remove"));
+			ImGui::BulletText( TR("Hover over the command name to change its hotkey"));
+			ImGui::BulletText( TR("Press any registered key to remove"));
 			ImGui::Separator();
 
 

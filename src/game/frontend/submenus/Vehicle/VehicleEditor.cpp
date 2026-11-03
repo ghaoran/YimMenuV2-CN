@@ -158,7 +158,7 @@ namespace YimMenu::Submenus
 		vehicleEditor->AddItem(std::make_unique<ImGuiItem>([] {
 			if (!Self::GetVehicle())
 			{
-				ImGui::Text( LBL("Please enter a vehicle."));
+				ImGui::Text( TR("Please enter a vehicle."));
 				currentVeh = 0;
 				return;
 			}
@@ -226,7 +226,7 @@ namespace YimMenu::Submenus
 				{
 					ImGui::BeginGroup();
 					{
-						ImGui::Text( LBL("Slot"));
+						ImGui::Text( TR("Slot"));
 						if (ImGui::BeginListBox("##slot", ImVec2(200, 200)))
 						{
 							for (const auto& [slot, name] : slot_display_names)
@@ -258,7 +258,7 @@ namespace YimMenu::Submenus
 						ImGui::SameLine();
 						ImGui::BeginGroup();
 						{
-							ImGui::Text( LBL("Mod"));
+							ImGui::Text( TR("Mod"));
 							if (ImGui::BeginListBox("##mod", ImVec2(240, 200)))
 							{
 								for (const auto& it : mod_display_names[selected_slot])
@@ -317,7 +317,7 @@ namespace YimMenu::Submenus
 							{
 								auto wheel_map = selected_slot == (int)VehicleModType::MOD_REARWHEEL ? rear_wheel_map : front_wheel_map;
 
-								ImGui::Text( LBL("Style"));
+								ImGui::Text( TR("Style"));
 								if (ImGui::BeginListBox("##style", ImVec2(200, 200)))
 								{
 									std::string mod_name = mod_display_names[selected_slot][*wheel_stock_mod];

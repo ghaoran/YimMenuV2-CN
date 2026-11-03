@@ -36,7 +36,7 @@ namespace YimMenu::Submenus
 
 						if (!fileName.size())
 						{
-							Notifications::Show("Saved Vehicles", "Filename empty!", NotificationType::Warning);
+							Notifications::Show(TR("Saved Vehicles"), TR("Filename empty!"), NotificationType::Warning)"Saved Vehicles", "Filename empty!", NotificationType::Warning);
 							return;
 						}
 
@@ -94,7 +94,7 @@ namespace YimMenu::Submenus
 			if (ImGui::InputTextWithHint("###veh_name", "Search", &search))
 				std::transform(search.begin(), search.end(), search.begin(), tolower);
 
-			ImGui::Text( LBL("Saved Vehicles"));
+			ImGui::Text( TR("Saved Vehicles"));
 
 			static const auto over_30 = (30 * ImGui::GetTextLineHeightWithSpacing() + 2);
 			const auto box_height = files.size() <= 30 ? (files.size() * ImGui::GetTextLineHeightWithSpacing() + 2) : over_30;
@@ -120,13 +120,13 @@ namespace YimMenu::Submenus
 			ImGui::SameLine();
 			ImGui::BeginGroup();
 			{
-				ImGui::Text( LBL("File Name"));
+				ImGui::Text( TR("File Name"));
 				ImGui::SetNextItemWidth(250);
 				ImGui::InputText("##vehiclefilename", vehicle_file_name_input, IM_ARRAYSIZE(vehicle_file_name_input));
 
 				if (folder.empty())
 				{
-					ImGui::Text( LBL("Folder Name"));
+					ImGui::Text( TR("Folder Name"));
 					ImGui::SetNextItemWidth(250);
 					ImGui::InputText("##foldername", newFolder, IM_ARRAYSIZE(newFolder));
 					drawSaveVehicleButton(true);

@@ -89,7 +89,7 @@ namespace YimMenu::Submenus
 			{
 				if (vehicleNames.empty())
 				{
-					ImGui::Text( LBL("Natives not cached yet."));
+					ImGui::Text( TR("Natives not cached yet."));
 				}
 				else
 				{
@@ -147,7 +147,7 @@ namespace YimMenu::Submenus
 
 		spawn->AddItem(std::make_unique<ImGuiItem>([] {
 			if (!*Pointers.IsSessionStarted)
-				return ImGui::TextDisabled( LBL("Join GTA Online."));
+				return ImGui::TextDisabled( TR("Join GTA Online."));
 
 			PersonalVehicles::Update();
 
@@ -179,7 +179,7 @@ namespace YimMenu::Submenus
 			{
 				if (PersonalVehicles::GetPersonalVehicles().empty())
 				{
-					ImGui::Text( LBL("Stats not loaded yet."));
+					ImGui::Text( TR("Stats not loaded yet."));
 				}
 				else
 				{
@@ -213,7 +213,7 @@ namespace YimMenu::Submenus
 									else
 									{
 										if (!personalVeh->Request(spawnInsidePersonalVehicle.GetState()))
-											Notifications::Show("Spawn Personal Vehicle", "Failed to spawn Personal Vehicle.", NotificationType::Error);
+											Notifications::Show(TR("Spawn Personal Vehicle"), TR("Failed to spawn Personal Vehicle."), NotificationType::Error)"Spawn Personal Vehicle", "Failed to spawn Personal Vehicle.", NotificationType::Error);
 									}
 								});
 							}

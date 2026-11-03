@@ -178,7 +178,7 @@ namespace YimMenu
 
 					if (!fileName.size())
 					{
-						Notifications::Show("Outfit", "Filename empty!", NotificationType::Warning);
+						Notifications::Show(TR("Outfit"), TR("Filename empty!"), NotificationType::Warning)"Outfit", "Filename empty!", NotificationType::Warning);
 						return;
 					}
 
@@ -216,14 +216,14 @@ namespace YimMenu
 				ImGui::Spacing();
 
 				// save outfit
-				ImGui::Text( LBL("Outfit Name"));
+				ImGui::Text( TR("Outfit Name"));
 				ImGui::SameLine();
 				ImGui::SetNextItemWidth(250);
 				ImGui::InputText("##filename", outfitName, IM_ARRAYSIZE(outfitName));
 
 				if (folder.empty())
 				{
-					ImGui::Text( LBL("Folder Name"));
+					ImGui::Text( TR("Folder Name"));
 					ImGui::SameLine();
 					ImGui::SetNextItemWidth(250);
 					ImGui::InputText("##foldername", newFolder, IM_ARRAYSIZE(newFolder));

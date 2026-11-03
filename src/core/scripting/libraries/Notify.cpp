@@ -14,7 +14,7 @@ namespace YimMenu::Lua
 			auto title = CheckStringSafe(state, 1);
 			auto message = CheckStringSafe(state, 2);
 			auto duration = lua_isnoneornil(state, 3) ? 5000 : luaL_checkinteger(state, 3);
-			Notifications::Show(title, message, NotificationType::Success, duration);
+			Notifications::Show(title, message, NotificationType::Success, duration)title, message, NotificationType::Success, duration);
 			return 0;
 		}
 
@@ -23,7 +23,7 @@ namespace YimMenu::Lua
 			auto title = CheckStringSafe(state, 1);
 			auto message = CheckStringSafe(state, 2);
 			auto duration = lua_isnoneornil(state, 3) ? 5000 : luaL_checkinteger(state, 3);
-			Notifications::Show(title, message, NotificationType::Info, duration);
+			Notifications::Show(title, message, NotificationType::Info, duration)title, message, NotificationType::Info, duration);
 			return 0;
 		}
 
@@ -32,7 +32,7 @@ namespace YimMenu::Lua
 			auto title = CheckStringSafe(state, 1);
 			auto message = CheckStringSafe(state, 2);
 			auto duration = lua_isnoneornil(state, 3) ? 5000 : luaL_checkinteger(state, 3);
-			Notifications::Show(title, message, NotificationType::Warning, duration);
+			Notifications::Show(title, message, NotificationType::Warning, duration)title, message, NotificationType::Warning, duration);
 			return 0;
 		}
 
@@ -41,7 +41,7 @@ namespace YimMenu::Lua
 			auto title = CheckStringSafe(state, 1);
 			auto message = CheckStringSafe(state, 2);
 			auto duration = lua_isnoneornil(state, 3) ? 5000 : luaL_checkinteger(state, 3);
-			Notifications::Show(title, message, NotificationType::Error, duration);
+			Notifications::Show(title, message, NotificationType::Error, duration)title, message, NotificationType::Error, duration);
 			return 0;
 		}
 

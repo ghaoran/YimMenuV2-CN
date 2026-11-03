@@ -68,13 +68,13 @@ namespace YimMenu::Features
 		{
 			if (!*Pointers.IsSessionStarted)
 			{
-				Notifications::Show("Open Gun Locker", "Please join GTA Online.", NotificationType::Error);
+				Notifications::Show(TR("Open Gun Locker"), TR("Please join GTA Online."), NotificationType::Error)"Open Gun Locker", "Please join GTA Online.", NotificationType::Error);
 				return;
 			}
 
 			if (GlobalPlayerBD::Get()->Entries[Self::GetPlayer().GetId()].SimpleInteriorData.Index != eSimpleInteriorIndex::SIMPLE_INTERIOR_INVALID)
 			{
-				Notifications::Show("Open Gun Locker", "Cannot open gun locker while in an interior.", NotificationType::Error);
+				Notifications::Show(TR("Open Gun Locker"), TR("Cannot open gun locker while in an interior."), NotificationType::Error)"Open Gun Locker", "Cannot open gun locker while in an interior.", NotificationType::Error);
 				return;
 			}
 

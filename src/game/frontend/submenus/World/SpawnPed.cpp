@@ -62,6 +62,9 @@ namespace YimMenu::Submenus
 										    !vehicle.IsSeatFree(-1))
 										{
 											Notifications::Show(
+											    TR("Spawn Ped"),
+											    TR("Cannot spawn ped in vehicle, all seats are occupied, please free a seat first or disable 'Spawn In My Vehicle' option."),
+											    NotificationType::Warning)
 											    "Spawn Ped",
 											    "Cannot spawn ped in vehicle, all seats are occupied, please free a seat first or disable 'Spawn In My Vehicle' option.",
 											    NotificationType::Warning);
@@ -197,7 +200,7 @@ namespace YimMenu::Submenus
 
 			ImGui::SameLine();
 			ImGui::BeginGroup();
-			ImGui::BulletText( LBL("Ctrl+Click to set player model"));
+			ImGui::BulletText( TR("Ctrl+Click to set player model"));
 			ImGui::Checkbox( LBL("Invincible"), &invincible);
 			ImGui::Checkbox( LBL("Spawn Dead"), &spawnDead);
 			ImGui::Checkbox( LBL("Spawn As Bodyguard"), &spawnAsBodyguard);

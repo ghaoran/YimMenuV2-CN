@@ -52,7 +52,7 @@ namespace YimMenu::Submenus
 
 			curThread = Scripts::FindScriptThread(Joaat(scriptName));
 			if (!curThread)
-				return ImGui::TextDisabled( LBL("Invalid"));
+				return ImGui::TextDisabled( TR("Invalid"));
 
 			DrawSavedVariable(curLocal);
 			DrawSavedVariableEdit(curLocal, curLocal.Read(curThread));
@@ -60,7 +60,7 @@ namespace YimMenu::Submenus
 
 		saved->AddItem(std::make_unique<ImGuiItem>([] {
 			if (!curThread)
-				return ImGui::TextDisabled( LBL("Invalid"));
+				return ImGui::TextDisabled( TR("Invalid"));
 
 			auto scriptIdf = curThread->m_ScriptHash;
 			if (scriptIdf != curLocal.script)

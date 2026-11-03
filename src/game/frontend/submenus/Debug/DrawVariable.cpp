@@ -7,7 +7,7 @@ namespace YimMenu
 	void DrawSavedVariableEdit(const SavedVariableBase& var, void* value)
 	{
 		if (!value)
-			return ImGui::TextDisabled( LBL("Invalid"));
+			return ImGui::TextDisabled( TR("Invalid"));
 
 		switch (var.type)
 		{

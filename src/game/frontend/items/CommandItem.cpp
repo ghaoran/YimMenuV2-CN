@@ -17,7 +17,7 @@ namespace YimMenu
 	{
 		if (!m_Command)
 		{
-			ImGui::Text( LBL("Unknown!"));
+			ImGui::Text( TR("Unknown!"));
 			return;
 		}
 
@@ -45,7 +45,7 @@ namespace YimMenu
 		ImGui::SetNextWindowSize(ImVec2(500, 120));
 		if (ImGui::BeginPopupModal(windowLabel.data(), nullptr, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoScrollbar))
 		{
-			ImGui::BulletText( LBL("Enter a keystroke"));
+			ImGui::BulletText( TR("Enter a keystroke"));
 
 			ImGui::Separator();
 

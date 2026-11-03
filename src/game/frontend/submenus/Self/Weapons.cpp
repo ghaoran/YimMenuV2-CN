@@ -101,7 +101,7 @@ namespace YimMenu::Submenus
 		}
 		if (ImGui::BeginPopup("##weaponspopup", ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove))
 		{
-			ImGui::Text( LBL("Search:"));
+			ImGui::Text( TR("Search:"));
 			ImGui::SameLine();
 			ImGui::SetNextItemWidth(250.f);
 			ImGui::InputText("##searchweapon", searchWeapon, sizeof(searchWeapon));

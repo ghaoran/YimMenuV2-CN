@@ -1,0 +1,458 @@
+[
+[
+"src/main.cpp",
+"Notifications::Show(\"YimMenuV2\", \"Loaded succesfully\", NotificationType::Success);"
+],
+[
+"src/core/scripting/LuaManager.cpp",
+"Notifications::Show(\"Lua Scripts\", error.what(), NotificationType::Error);"
+],
+[
+"src/core/scripting/LuaManager.cpp",
+"Notifications::Show(\"Lua Scripts\", error.what(), NotificationType::Error);"
+],
+[
+"src/core/scripting/LuaManager.cpp",
+"Notifications::Show(\"Lua Scripting\", std::format(\"Script {} has been unloaded due to a malfunction. Check the console for more details\", script->GetName()), NotificationType::Warni"
+],
+[
+"src/core/scripting/libraries/ImGui.cpp",
+"ImGui::TextColored(ImVec4(r, g, b, a), \"%s\", text);"
+],
+[
+"src/core/scripting/libraries/Notify.cpp",
+"Notifications::Show(title, message, NotificationType::Success, duration);"
+],
+[
+"src/core/scripting/libraries/Notify.cpp",
+"Notifications::Show(title, message, NotificationType::Info, duration);"
+],
+[
+"src/core/scripting/libraries/Notify.cpp",
+"Notifications::Show(title, message, NotificationType::Warning, duration);"
+],
+[
+"src/core/scripting/libraries/Notify.cpp",
+"Notifications::Show(title, message, NotificationType::Error, duration);"
+],
+[
+"src/game/backend/Outfit.cpp",
+"Notifications::Show(\"Outfit\", \"File does not exist.\", NotificationType::Error);"
+],
+[
+"src/game/backend/Outfit.cpp",
+"Notifications::Show(\"Oufit\", \"Ped models different.\", NotificationType::Error);"
+],
+[
+"src/game/backend/SavedPlayers.cpp",
+"Notifications::Show(\"Player Tracker\", std::format(\"{} is no longer online\", saved_data.m_Name));"
+],
+[
+"src/game/backend/SavedPlayers.cpp",
+"Notifications::Show(\"Player Tracker\", std::format(\"{} is now in a joinable session\", saved_data.m_Name));"
+],
+[
+"src/game/backend/SavedPlayers.cpp",
+"Notifications::Show(\"Player Tracker\", std::format(\"{} is now online\", saved_data.m_Name));"
+],
+[
+"src/game/backend/SavedPlayers.cpp",
+"Notifications::Show(\"Player Tracker\", std::format(\"{} is no longer in a joinable session\", saved_data.m_Name));"
+],
+[
+"src/game/backend/SavedPlayers.cpp",
+"Notifications::Show(\"Player Tracker\", std::format(\"{} is now in a {} session\", saved_data.m_Name, FetchedPlayerData::GameStateToString(fetched_data.m_GameState)));"
+],
+[
+"src/game/backend/SavedPlayers.cpp",
+"Notifications::Show(\"Player Tracker\", std::format(\"{} is no longer in a {}\", saved_data.m_Name, FetchedPlayerData::MissionTypeToString(saved_data.m_FetchedData->m_MissionType)));"
+],
+[
+"src/game/backend/SavedPlayers.cpp",
+"Notifications::Show(\"Player Tracker\", std::format(\"{} is now in a {}\", saved_data.m_Name, FetchedPlayerData::MissionTypeToString(fetched_data.m_MissionType)));"
+],
+[
+"src/game/backend/SavedPlayers.cpp",
+"Notifications::Show(\"Player Tracker\", std::format(\"{} has hosted a job lobby\", saved_data.m_Name));"
+],
+[
+"src/game/backend/SavedPlayers.cpp",
+"Notifications::Show(\"Player Tracker\", std::format(\"{} has joined a job lobby\", saved_data.m_Name));"
+],
+[
+"src/game/backend/SavedPlayers.cpp",
+"Notifications::Show(\"Player Tracker\", std::format(\"{} is no longer in a job lobby\", saved_data.m_Name));"
+],
+[
+"src/game/backend/SavedVehicles.cpp",
+"Notifications::Show(\"Persist Car\", \"Tried to save a vehicle which does not exist\", NotificationType::Warning);"
+],
+[
+"src/game/backend/SavedVehicles.cpp",
+"Notifications::Show(\"Persist Car\", \"File does not exist.\", NotificationType::Error);"
+],
+[
+"src/game/backend/SavedVehicles.cpp",
+"Notifications::Show(\"Persist Car\", std::format(\"Spawned {}\", fileName), NotificationType::Success);"
+],
+[
+"src/game/backend/SavedVehicles.cpp",
+"Notifications::Show(\"Persist Car\", std::format(\"Unable to spawn {}\", fileName), NotificationType::Error);"
+],
+[
+"src/game/backend/SavedVehicles.cpp",
+"Notifications::Show(\"Persist Car\", \"Select a file first\", NotificationType::Warning);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Daily Activities\", \"Completed all activities, switch session to apply the changes.\");"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Daily Activities\", \"Reset all activities, switch session to apply the changes.\");"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Hidden Caches\", \"This Hidden Cache has already been collected.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Hidden Caches\", \"This Hidden Cache has already been collected.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Treasure Chests\", \"This Treasure Chest has already been collected.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Treasure Chests\", \"This Treasure Chest has already been collected.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Shipwreck\", \"Shipwreck has already been collected.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Shipwreck\", \"Shipwreck has already been collected.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Buried Stashes\", \"This Buried Stash has already been collected.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Buried Stashes\", \"This Buried Stash has already been collected.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Time Trials\", \"This Time Trial has already been beaten.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Time Trials\", \"Please enable the blip from the Interaction Menu.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Time Trials\", \"This Time Trial has already been beaten.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Exotic Exports\", \"You have already delivered all the vehicles.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Exotic Exports\", \"You have already delivered all the vehicles.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Exotic Exports\", \"You have just delivered a vehicle, wait a moment.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"G's Cache\", \"G's Cache has already been collected.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"G's Cache\", \"G's Cache has already been collected.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Stash House\", \"Stash House has already been raided.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"LS Tags\", \"This LS Tag has already been sprayed.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"LS Tags\", \"This LS Tag has already been sprayed.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Madrazo Hits\", \"You must own a Bail Office.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Madrazo Hits\", \"Madrazo Hit has already been completed.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Shoot Animals Photography\", \"This animal has already been photographed.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Shoot Animals Photography\", \"This animal has already been photographed.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Smoke on the Water\", \"You must own a Smoke on the Water property.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Smoke on the Water\", \"This product has already been collected.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Smoke on the Water\", \"You must own a Smoke on the Water property.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Smoke on the Water\", \"This product has already been collected.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Golden Clover\", \"Golden Clover has already been collected.\", NotificationType::Error);"
+],
+[
+"src/game/features/recovery/DailyActivities.cpp",
+"Notifications::Show(\"Golden Clover\", \"Golden Clover has already been collected.\", NotificationType::Error);"
+],
+[
+"src/game/features/self/CustomWeapon.cpp",
+"Notifications::Show(\"Custom Weapon\", \"Entity is not a ped.\", NotificationType::Warning);"
+],
+[
+"src/game/features/self/CustomWeapon.cpp",
+"Notifications::Show(\"Custom Weapon\", \"Player entity cannot be deleted.\", NotificationType::Warning);"
+],
+[
+"src/game/features/self/CustomWeapon.cpp",
+"Notifications::Show(\"Custom Weapon\", \"Entity is too far.\", NotificationType::Warning);"
+],
+[
+"src/game/features/self/CustomWeapon.cpp",
+"Notifications::Show(\"Custom Weapon\", \"Gravity gun cannot be applied on player entity.\", NotificationType::Warning);"
+],
+[
+"src/game/features/self/CustomWeapon.cpp",
+"Notifications::Show(\"Custom Weapon\", \"Entity is too far.\", NotificationType::Warning);"
+],
+[
+"src/game/features/self/CustomWeapon.cpp",
+"Notifications::Show(\"Custom Weapon\", \"Invalid vehicle.\", NotificationType::Warning);"
+],
+[
+"src/game/features/self/CustomWeapon.cpp",
+"Notifications::Show(\"Custom Weapon\", \"Invalid vehicle.\", NotificationType::Warning);"
+],
+[
+"src/game/features/self/CustomWeapon.cpp",
+"Notifications::Show(\"Custom Weapon\", \"No vehicle model name provided.\", NotificationType::Error);"
+],
+[
+"src/game/features/self/CustomWeapon.cpp",
+"Notifications::Show(\"Custom Weapon\", \"Invalid vehicle model name provided.\", NotificationType::Error);"
+],
+[
+"src/game/features/self/OpenGunLocker.cpp",
+"Notifications::Show(\"Open Gun Locker\", \"Please join GTA Online.\", NotificationType::Error);"
+],
+[
+"src/game/features/self/OpenGunLocker.cpp",
+"Notifications::Show(\"Open Gun Locker\", \"Cannot open gun locker while in an interior.\", NotificationType::Error);"
+],
+[
+"src/game/features/self/OpenWardrobe.cpp",
+"Notifications::Show(\"Wardrobe\", \"Not safe to open the wardrobe at the moment.\", NotificationType::Error);"
+],
+[
+"src/game/features/self/OpenWardrobe.cpp",
+"Notifications::Show(\"Wardrobe\", \"Failed to open the wardrobe.\", NotificationType::Error);"
+],
+[
+"src/game/features/vehicle/CallMechanic.cpp",
+"Notifications::Show(\"Mechanic\", \"Not safe to call the mechanic at the moment.\", NotificationType::Error);"
+],
+[
+"src/game/features/vehicle/CallMechanic.cpp",
+"Notifications::Show(\"Mechanic\", \"Failed to call the mechanic.\", NotificationType::Error);"
+],
+[
+"src/game/features/vehicle/FixAllVehicles.cpp",
+"Notifications::Show(\"Fix All Vehicles\", std::format(\"{} vehicles fixed.\", count), NotificationType::Success);"
+],
+[
+"src/game/features/vehicle/FixAllVehicles.cpp",
+"Notifications::Show(\"Fix All Vehicles\", \"No vehicles to fix.\");"
+],
+[
+"src/game/features/vehicle/SavePersonalVehicle.cpp",
+"Notifications::Show(\"Save Personal Vehicle\", \"Please join GTA Online.\", NotificationType::Error);"
+],
+[
+"src/game/features/vehicle/SavePersonalVehicle.cpp",
+"Notifications::Show(\"Save Personal Vehicle\", \"Please get in a vehicle.\", NotificationType::Error);"
+],
+[
+"src/game/features/vehicle/SavePersonalVehicle.cpp",
+"Notifications::Show(\"Save Personal Vehicle\", \"This vehicle cannot be saved as a personal vehicle.\", NotificationType::Error);"
+],
+[
+"src/game/features/vehicle/SavePersonalVehicle.cpp",
+"Notifications::Show(\"Save Personal Vehicle\", \"This vehicle is already a personal vehicle.\", NotificationType::Error);"
+],
+[
+"src/game/features/world/Spawn.cpp",
+"Notifications::Show(\"Spawn Ped\", \"No model name provided.\", NotificationType::Error);"
+],
+[
+"src/game/features/world/Spawn.cpp",
+"Notifications::Show(\"Spawn Ped\", \"Invalid model name provided.\", NotificationType::Error);"
+],
+[
+"src/game/features/world/Spawn.cpp",
+"Notifications::Show(\"Spawn Object\", \"No model name provided.\", NotificationType::Error);"
+],
+[
+"src/game/features/world/Spawn.cpp",
+"Notifications::Show(\"Spawn Object\", \"Invalid model name provided.\", NotificationType::Error);"
+],
+[
+"src/game/frontend/submenus/Network.cpp",
+"Notifications::Show(\"Joiner\", \"Failed to get RID from username\", NotificationType::Error);"
+],
+[
+"src/game/frontend/submenus/Teleport.cpp",
+"Notifications::Show(\"Custom Teleport\", \"Please enter a valid name\", NotificationType::Warning);"
+],
+[
+"src/game/frontend/submenus/Teleport.cpp",
+"Notifications::Show(\"Custom Teleport\", std::format(\"Location with name {} already exists\", newLocationName));"
+],
+[
+"src/game/frontend/submenus/Debug/Scripts.cpp",
+"std::format(\"{} ({}"
+],
+[
+"src/game/frontend/submenus/Debug/Scripts.cpp",
+"Notifications::Show(\"Start Script\", \"Script does not exist.\", NotificationType::Error);"
+],
+[
+"src/game/frontend/submenus/Debug/Scripts.cpp",
+"Notifications::Show(\"Start Script\", \"Script is already running.\", NotificationType::Error);"
+],
+[
+"src/game/frontend/submenus/Debug/Scripts.cpp",
+"Notifications::Show(\"Start Script\", \"No free stack of this size.\", NotificationType::Error);"
+],
+[
+"src/game/frontend/submenus/Debug/Scripts.cpp",
+"Notifications::Show(\"Start Script\", std::format(\"Started script with ID {}.\", id), NotificationType::Success);"
+],
+[
+"src/game/frontend/submenus/Network/RandomEvents.cpp",
+"Notifications::Show(\"Random Events\", \"Event script is not active. Are you a participant?\", NotificationType::Error);"
+],
+[
+"src/game/frontend/submenus/Network/RandomEvents.cpp",
+"ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), \"Active Events: %d/%d\", numActiveEvents, maxActiveEvents);"
+],
+[
+"src/game/frontend/submenus/Network/RandomEvents.cpp",
+"Notifications::Show(\"Random Events\", \"Failed to launch event. Are you freemode host?\", NotificationType::Error);"
+],
+[
+"src/game/frontend/submenus/Network/RandomEvents.cpp",
+"Notifications::Show(\"Random Events\", \"Event is already active.\", NotificationType::Error);"
+],
+[
+"src/game/frontend/submenus/Network/RandomEvents.cpp",
+"Notifications::Show(\"Random Events\", \"Event is not active.\", NotificationType::Error);"
+],
+[
+"src/game/frontend/submenus/Network/RandomEvents.cpp",
+"Notifications::Show(\"Random Events\", \"Failed to teleport to event. Coordinates are not valid.\", NotificationType::Error);"
+],
+[
+"src/game/frontend/submenus/Network/RandomEvents.cpp",
+"Notifications::Show(\"Random Events\", \"Event is not active.\", NotificationType::Error);"
+],
+[
+"src/game/frontend/submenus/Network/SavedPlayers.cpp",
+"Notifications::Show(\"Saved Players\", \"Failed to get RID from username\", NotificationType::Error);"
+],
+[
+"src/game/frontend/submenus/Recovery/StatEditor.cpp",
+"ImGui::TextColored(ImVec4(0.957f, 0.643f, 0.376f, 1.00f), \"The entered date or time is invalid, please recheck the input data.\");"
+],
+[
+"src/game/frontend/submenus/Recovery/Transactions.cpp",
+"Notifications::Show(\"Transactions\", \"Failed to create basket\", NotificationType::Error);"
+],
+[
+"src/game/frontend/submenus/Recovery/Transactions.cpp",
+"Notifications::Show(\"Transactions\",\n\t\t\t\t\t\t\t    std::format(\"Failed to add {} (x{}) to basket\", item.m_PrimaryItem.m_Name, item.m_Quantity),\n\t\t\t\t\t\t\t    NotificationType::Error);"
+],
+[
+"src/game/frontend/submenus/Recovery/Transactions.cpp",
+"Notifications::Show(\"Transactions\", \"Failed to create service\", NotificationType::Error);"
+],
+[
+"src/game/frontend/submenus/Recovery/Transactions.cpp",
+"Notifications::Show(\"Transactions\", \"Failed to begin checkout\", NotificationType::Error);"
+],
+[
+"src/game/frontend/submenus/Recovery/Transactions.cpp",
+"Notifications::Show(\"Transactions\", \"Transaction complete\", NotificationType::Success);"
+],
+[
+"src/game/frontend/submenus/Recovery/Transactions.cpp",
+"Notifications::Show(\"Transactions\", \"Transaction failed\", NotificationType::Error);"
+],
+[
+"src/game/frontend/submenus/Self/OutfitEditor.cpp",
+"Notifications::Show(\"Outfit\", \"Filename empty!\", NotificationType::Warning);"
+],
+[
+"src/game/frontend/submenus/Settings/LuaScripts.cpp",
+"Notifications::Show(\"Lua Scripts\", \"Unable to open the scripts folder\", NotificationType::Error);"
+],
+[
+"src/game/frontend/submenus/Vehicle/SavedVehicles.cpp",
+"Notifications::Show(\"Saved Vehicles\", \"Filename empty!\", NotificationType::Warning);"
+],
+[
+"src/game/frontend/submenus/Vehicle/SpawnVehicle.cpp",
+"Notifications::Show(\"Spawn Personal Vehicle\", \"Failed to spawn Personal Vehicle.\", NotificationType::Error);"
+],
+[
+"src/game/frontend/submenus/World/SpawnPed.cpp",
+"Notifications::Show(\n\t\t\t\t\t\t\t\t\t\t\t    \"Spawn Ped\",\n\t\t\t\t\t\t\t\t\t\t\t    \"Cannot spawn ped in vehicle, all seats are occupied, please free a seat first or disable 'Spawn In My Vehicle' opti"
+],
+[
+"src/game/gta/Network.cpp",
+"Notifications::Show(\"Joiner\", \"Failed to join session\", NotificationType::Error);"
+],
+[
+"src/game/gta/Network.cpp",
+"Notifications::Show(\"Joiner\", \"An existing transition is in progress\", NotificationType::Error);"
+],
+[
+"src/game/gta/Network.cpp",
+"Notifications::Show(\"Joiner\", \"Failed to get session info by RID\", NotificationType::Error);"
+],
+[
+"src/game/gta/Network.cpp",
+"Notifications::Show(\"Joiner\", \"Failed to get session info by RID\", NotificationType::Error);"
+]
+]

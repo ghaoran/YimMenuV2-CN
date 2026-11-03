@@ -93,7 +93,7 @@ namespace YimMenu::Submenus
 				auto folder = std::filesystem::canonical(FileMgr::GetProjectFolder("./scripts").Path());
 				auto result = ShellExecuteW(nullptr, L"open", folder.c_str(), nullptr, nullptr, SW_SHOWNORMAL);
 				if (reinterpret_cast<std::intptr_t>(result) <= 32)
-					Notifications::Show("Lua Scripts", "Unable to open the scripts folder", NotificationType::Error);
+					Notifications::Show(TR("Lua Scripts"), TR("Unable to open the scripts folder"), NotificationType::Error)"Lua Scripts", "Unable to open the scripts folder", NotificationType::Error);
 			}
 
 			ImGui::BeginGroup();

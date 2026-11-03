@@ -51,14 +51,14 @@ namespace YimMenu::Submenus
 				}
 				else
 				{
-					ImGui::Text( LBL("Ped missing or deleted"));
+					ImGui::Text( TR("Ped missing or deleted"));
 				}
 
 				auto rid1 = Players::GetSelected().GetRID();
 
 				std::string ridStr = std::to_string(rid1);
 
-				ImGui::Text( LBL("RID:"));
+				ImGui::Text( TR("RID:"));
 				ImGui::SameLine();
 				if (ImGui::SmallButton(std::to_string(rid1).c_str()))
 				{
@@ -69,7 +69,7 @@ namespace YimMenu::Submenus
 				switch (platformAccountId.m_Platform)
 				{
 				case PlatformAccountId::PLATFORM_XBOX:
-					ImGui::Text( LBL("Xbox User ID:"));
+					ImGui::Text( TR("Xbox User ID:"));
 					ImGui::SameLine();
 					if (ImGui::SmallButton(std::to_string(platformAccountId.m_XboxUserId).c_str()))
 					{
@@ -77,7 +77,7 @@ namespace YimMenu::Submenus
 					}
 					break;
 				case PlatformAccountId::PLATFORM_STEAM:
-					ImGui::Text( LBL("Steam ID:"));
+					ImGui::Text( TR("Steam ID:"));
 					ImGui::SameLine();
 					if (ImGui::SmallButton(std::to_string(platformAccountId.m_SteamId).c_str()))
 					{
@@ -85,7 +85,7 @@ namespace YimMenu::Submenus
 					}
 					break;
 				case PlatformAccountId::PLATFORM_EPIC:
-					ImGui::Text( LBL("Epic Account ID:"));
+					ImGui::Text( TR("Epic Account ID:"));
 					ImGui::SameLine();
 					if (ImGui::SmallButton(platformAccountId.m_EpicAccountId))
 					{
@@ -101,7 +101,7 @@ namespace YimMenu::Submenus
 
 				auto addr2 = BuildIPStr(ip.m_IpAddress.m_Field1, ip.m_IpAddress.m_Field2, ip.m_IpAddress.m_Field3, ip.m_IpAddress.m_Field4);
 
-				ImGui::Text( LBL("IP Address:"));
+				ImGui::Text( TR("IP Address:"));
 				ImGui::SameLine();
 				if (ImGui::SmallButton(addr2.c_str()))
 				{
@@ -145,7 +145,7 @@ namespace YimMenu::Submenus
 			else
 			{
 				Players::SetSelected(Self::GetPlayer());
-				ImGui::Text( LBL("No players yet!"));
+				ImGui::Text( TR("No players yet!"));
 			}
 		}));
 

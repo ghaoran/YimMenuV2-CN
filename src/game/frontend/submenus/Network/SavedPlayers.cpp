@@ -79,7 +79,7 @@ namespace YimMenu::Submenus
 
 			if (players.size() == 0)
 			{
-				ImGui::TextDisabled( LBL("No saved players"));
+				ImGui::TextDisabled( TR("No saved players"));
 				ImGui::EndListBox();
 				return;
 			}
@@ -146,7 +146,7 @@ namespace YimMenu::Submenus
 			}
 			else
 			{
-				ImGui::TextDisabled( LBL("Data not fetched yet"));
+				ImGui::TextDisabled( TR("Data not fetched yet"));
 			}
 
 			if (ImGui::Button( LBL("Join")))
@@ -194,7 +194,7 @@ namespace YimMenu::Submenus
 				}
 				else
 				{
-					Notifications::Show("Saved Players", "Failed to get RID from username", NotificationType::Error);
+					Notifications::Show(TR("Saved Players"), TR("Failed to get RID from username"), NotificationType::Error)"Saved Players", "Failed to get RID from username", NotificationType::Error);
 				}
 			});
 	}

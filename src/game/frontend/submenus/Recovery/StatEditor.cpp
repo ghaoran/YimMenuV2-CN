@@ -421,7 +421,7 @@ namespace YimMenu::Submenus
 		case sStatData::Type::TEXTLABEL:
 		default:
 			ImGui::BeginDisabled();
-			ImGui::Text( LBL("Data type not supported"));
+			ImGui::Text( TR("Data type not supported"));
 			ImGui::EndDisabled();
 			return false; // data type not supported
 		}
@@ -490,7 +490,7 @@ namespace YimMenu::Submenus
 
 		normal->AddItem(std::make_unique<ImGuiItem>([] {
 			if (!NativeInvoker::AreHandlersCached())
-				return ImGui::TextDisabled( LBL("Natives not cached yet"));
+				return ImGui::TextDisabled( TR("Natives not cached yet"));
 
 			static StatInfo current_info;
 			static char stat_buf[48]{};
@@ -505,7 +505,7 @@ namespace YimMenu::Submenus
 			}
 
 			if (!current_info.IsValid())
-				return ImGui::TextDisabled( LBL("Stat not found"));
+				return ImGui::TextDisabled( TR("Stat not found"));
 			else if (current_info.m_Normalized)
 			{
 				ImGui::Text( TR("Normalized name to: %s"), current_info.m_Name.data());
@@ -535,7 +535,7 @@ namespace YimMenu::Submenus
 
 		packed->AddItem(std::make_unique<ImGuiItem>([] {
 			if (!NativeInvoker::AreHandlersCached())
-				return ImGui::TextDisabled( LBL("Natives not cached yet"));
+				return ImGui::TextDisabled( TR("Natives not cached yet"));
 
 			// TODO: improve packed stat editor
 			static PackedStatInfo current_info{0, false, true};
@@ -550,7 +550,7 @@ namespace YimMenu::Submenus
 			}
 
 			if (!current_info.IsValid())
-				return ImGui::TextDisabled( LBL("Index not valid"));
+				return ImGui::TextDisabled( TR("Index not valid"));
 
 			RenderPackedStatEditor(value, current_info);
 
@@ -565,7 +565,7 @@ namespace YimMenu::Submenus
 
 		packed_range->AddItem(std::make_unique<ImGuiItem>([] {
 			if (!NativeInvoker::AreHandlersCached())
-				return ImGui::TextDisabled( LBL("Natives not cached yet"));
+				return ImGui::TextDisabled( TR("Natives not cached yet"));
 
 			static int start{}, end{}, value{};
 
@@ -585,7 +585,7 @@ namespace YimMenu::Submenus
 
 		from_clipboard->AddItem(std::make_unique<ImGuiItem>([] {
 			if (!NativeInvoker::AreHandlersCached())
-				return ImGui::TextDisabled( LBL("Natives not cached yet"));
+				return ImGui::TextDisabled( TR("Natives not cached yet"));
 
 			if (ImGui::Button( LBL("Load from Clipboard")))
 			{

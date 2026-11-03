@@ -34,7 +34,7 @@ namespace YimMenu::Network
 				{
 					if (!Pointers.JoinSessionByInfo(*Pointers.NetworkSession, &*session_to_join, 1, 1 | 2, nullptr, 0))
 					{
-						Notifications::Show("Joiner", "Failed to join session", NotificationType::Error);
+						Notifications::Show(TR("Joiner"), TR("Failed to join session"), NotificationType::Error)"Joiner", "Failed to join session", NotificationType::Error);
 						NativeInvoker::GetNativeHandler(NativeIndex::NETWORK_SESSION_HOST)(ctx);
 					}
 					else
@@ -53,7 +53,7 @@ namespace YimMenu::Network
 
 		if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH("maintransition"_J) > 0 || STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS())
 		{
-			Notifications::Show("Joiner", "An existing transition is in progress", NotificationType::Error);
+			Notifications::Show(TR("Joiner"), TR("An existing transition is in progress"), NotificationType::Error)"Joiner", "An existing transition is in progress", NotificationType::Error);
 			return;
 		}
 
@@ -79,13 +79,13 @@ namespace YimMenu::Network
 			}
 			else
 			{
-				Notifications::Show("Joiner", "Failed to get session info by RID", NotificationType::Error);
+				Notifications::Show(TR("Joiner"), TR("Failed to get session info by RID"), NotificationType::Error)"Joiner", "Failed to get session info by RID", NotificationType::Error);
 				return;
 			}
 		}
 		else
 		{
-			Notifications::Show("Joiner", "Failed to get session info by RID", NotificationType::Error);
+			Notifications::Show(TR("Joiner"), TR("Failed to get session info by RID"), NotificationType::Error)"Joiner", "Failed to get session info by RID", NotificationType::Error);
 			return;
 		}
 	}

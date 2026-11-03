@@ -37,7 +37,7 @@ namespace YimMenu
 			}
 			ImGui::EndChild();
 
-			ImGui::Text( LBL("YimMenuV2"));
+			ImGui::Text( TR("YimMenuV2"));
 
 			pos.y -= 28;
 			ImGui::SetCursorPos(ImVec2(pos.x + 130, pos.y));

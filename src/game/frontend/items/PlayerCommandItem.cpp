@@ -16,7 +16,7 @@ namespace YimMenu
 	{
 		if (!m_Command)
 		{
-			ImGui::Text( LBL("Unknown!"));
+			ImGui::Text( TR("Unknown!"));
 			return;
 		}
 

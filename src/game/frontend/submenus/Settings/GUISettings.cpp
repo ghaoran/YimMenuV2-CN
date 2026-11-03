@@ -217,7 +217,7 @@ namespace YimMenu
 	static void DrawColorsTab()
 	{
 		bool changed = false;
-		ImGui::Text( LBL("Modify Colors:"));
+		ImGui::Text( TR("Modify Colors:"));
 		ImGui::Separator();
 		for (int i = 0; i < ImGuiCol_COUNT; ++i)
 		{
@@ -240,7 +240,7 @@ namespace YimMenu
 	static void DrawRoundingTab()
 	{
 		bool changed = false;
-		ImGui::Text( LBL("Adjust Rounding:"));
+		ImGui::Text( TR("Adjust Rounding:"));
 		ImGui::Separator();
 		for (auto& [k, v] : g_RoundingValues)
 			if (ImGui::SliderFloat(PrettyPrintLabel(k).c_str(), &v, 0.0f, 20.0f, "%.1f"))
@@ -256,7 +256,7 @@ namespace YimMenu
 	static void DrawLayoutTab()
 	{
 		auto& s = ImGui::GetStyle();
-		ImGui::Text( LBL("Layout & Alignment:"));
+		ImGui::Text( TR("Layout & Alignment:"));
 		ImGui::Separator();
 		DrawStyleVec2("WindowPadding", s.WindowPadding.x, s.WindowPadding.y, 0.f, 32.f);
 		DrawStyleVec2("ItemSpacing", s.ItemSpacing.x, s.ItemSpacing.y, 0.f, 32.f);
@@ -275,7 +275,7 @@ namespace YimMenu
 	static void DrawBorderTab()
 	{
 		auto& s = ImGui::GetStyle();
-		ImGui::Text( LBL("Border Sizes:"));
+		ImGui::Text( TR("Border Sizes:"));
 		ImGui::Separator();
 		DrawStyleFloat("WindowBorderSize", s.WindowBorderSize, 0.f, 8.f);
 		DrawStyleFloat("FrameBorderSize", s.FrameBorderSize, 0.f, 8.f);
@@ -286,7 +286,7 @@ namespace YimMenu
 	static void DrawGlobalTab()
 	{
 		auto& s = ImGui::GetStyle();
-		ImGui::Text( LBL("Global Settings:"));
+		ImGui::Text( TR("Global Settings:"));
 		ImGui::Separator();
 		DrawStyleFloat("GlobalAlpha", s.Alpha, 0.1f, 1.f);
 		DrawStyleFloat("DisabledAlpha", s.DisabledAlpha, 0.f, 1.f);
@@ -298,7 +298,7 @@ namespace YimMenu
 	{
 		ImGuiIO& io = ImGui::GetIO();
 		static float scale = io.FontGlobalScale;
-		ImGui::Text( LBL("Font Configuration:"));
+		ImGui::Text( TR("Font Configuration:"));
 		ImGui::Separator();
 		ImGui::Text( TR("Current Scale: %.2f"), io.FontGlobalScale);
 		ImGui::SliderFloat( LBL("Font Scale"), &scale, 0.5f, 2.0f, "%.2f");
@@ -311,7 +311,7 @@ namespace YimMenu
 		InitializeColorCommands();
 		auto imGuiCustomStyle = std::make_shared<Category>("Customize");
 		imGuiCustomStyle->AddItem(std::make_unique<ImGuiItem>([] {
-			ImGui::Text( LBL("ImGui Style Editor"));
+			ImGui::Text( TR("ImGui Style Editor"));
 			ImGui::Separator();
 			if (ImGui::BeginTabBar("StyleTabs"))
 			{
