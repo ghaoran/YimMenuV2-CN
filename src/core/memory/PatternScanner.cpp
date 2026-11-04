@@ -39,9 +39,14 @@ namespace YimMenu
 		}
 		else
 		{
-			// spawning threads seems to throw STATUS_THREADPOOL_FREE_LIBRARY_ON_COMPLETION_FAILED when manual mapping
+			// spawning threads seems to throw STATUS_THREADPOOL_FREE_LIBRARY_ON_COMPLETION_FAILED when manual mapping.
+			// NOTE: ScanInternal must run for every pattern even after one fails, otherwise a single
+			// missing signature would silently skip all remaining patterns in this module.
 			for (const auto& [pattern, func] : m_Patterns)
-				scanSuccess = scanSuccess && PatternScanner::ScanInternal(pattern, func);
+			{
+				const bool found = PatternScanner::ScanInternal(pattern, func);
+				scanSuccess = scanSuccess && found;
+			}
 		}
 
 		return scanSuccess;
